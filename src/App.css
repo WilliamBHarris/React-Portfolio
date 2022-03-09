@@ -1,31 +1,60 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Main Show */
+.mainBox {
+  background: green;
+  height: 100vh;
+}
+
 /* Main Nav */
 .logo {
+  color: white;
   position: absolute;
   left: 0;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .mainNav {
   width: 100%;
-  height: 10vh;
+  height: 7vh;
   background-color: teal;
 }
 
 .navItems {
+  border: 1px solid white;
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: flex-end;
+  width: 100%;
   align-items: center;
+  column-gap: 100px;
+  margin-right: 100px;
   height: 100%;
-  float: right;
   list-style: none;
   font-size: 20px;
 }
 
 /* Main Nav End */
+
+
+.AboutMain {
+  background-color: blue;
+  height: 100vh;
+}
+
+.ContactMain {
+  background-color: yellow;
+  height: 100vh;
+}
+
+.WorkMain {
+  background-color: black;
+  height: 100vh;
+}
+
+.workHead {
+  color: white;
+}
