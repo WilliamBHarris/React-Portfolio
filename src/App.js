@@ -1,13 +1,13 @@
 import './App.css';
 import Nav from './Components/Nav';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Main from './Components/Main';
 import About from './Components/About';
 import Work from './Components/Work';
 import Contact from './Components/Contact';
-import { BrowserRouter as Router, Route, Routes, Link, Switch, useLocation } from "react-router-dom";
-import { RingLoader } from 'react-spinners';
-import {AnimatePresence, motion} from 'framer-motion'
+import { Route, Routes, useLocation } from "react-router-dom";
+import { ScaleLoader } from 'react-spinners';
+import {AnimatePresence} from 'framer-motion'
 
 function App() {
   const location = useLocation();
@@ -18,22 +18,25 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 1000)
   }, [])
 
   return (
     <main className='mainBox'>
-       <Nav />
+       
       { loading ? 
-      <RingLoader 
-      size={110}
-      color={'#123abc'}
+      <div className="loader">
+        <p className='loadingText'>Preparing for greatness...</p>
+      <ScaleLoader 
+      size={310}
+      color={'#FFFFFF'}
       loading={loading}
       />
+      </div>
     : 
+    <>
+    <Nav />
     <AnimatePresence exitBeforeEnter initial={false}>
- 
-     
       <Routes location={location} key={location.pathname}>
      <Route path='/' element={ <Main />} />
      <Route path='/about' element={ <About />} />
@@ -41,6 +44,7 @@ function App() {
      <Route path='/contact' element={ <Contact />} />
       </Routes>
       </AnimatePresence>
+      </>
     }
 
     </main>
