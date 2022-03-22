@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import person from "../assets/person.png";
+// import person from "../assets/person.png";
 
 const variants = {
   hidden: { opacity: 1, y: "-100vh" },
   visible: { opacity: 1, transition: { duration: 1, delay: 0 }, y: 0 },
 };
-const imgVariants = {
-  hidden: { opacity: 0, x: 0 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.5 } },
-};
+// const imgVariants = {
+//   hidden: { opacity: 0, x: 0 },
+//   visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.5 } },
+// };
 
 const Main = () => {
   return (
@@ -26,7 +26,7 @@ const Main = () => {
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.6 }}
-        transition={{ duration: 1, delay: 1.5 }}
+        transition={{ duration: 1, delay: 1.3 }}
         exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc1"
       >
@@ -35,7 +35,7 @@ const Main = () => {
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
-        transition={{ duration: 1, delay: 2 }}
+        transition={{ duration: 1, delay: 1.6 }}
         exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc2"
       >
@@ -44,7 +44,7 @@ const Main = () => {
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.1 }}
-        transition={{ duration: 1, delay: 2.5 }}
+        transition={{ duration: 1, delay: 1.9 }}
         exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc3"
       >
@@ -82,6 +82,7 @@ const Main = () => {
         variants={imgVariants}
         initial="hidden"
         animate="visible"
+        exit={{opacity: 0, transition:{delay: 0}}}
         className="personImg"
         src={person}
       /> */}

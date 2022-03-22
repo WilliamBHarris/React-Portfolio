@@ -47,6 +47,17 @@
   height: 100vh;
 }
 
+.aboutBox {
+  border: 1px solid black;
+  margin-left: 410px;
+  width: 75%;
+  height: 65vh;
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contactMain {
   background: yellow;
   height: 100vh;
