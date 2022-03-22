@@ -20,7 +20,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 2500)
+    }, 1)
   }, [])
 
   return (
@@ -44,7 +44,6 @@ function App() {
     <Nav />
     <AnimatePresence exitBeforeEnter initial={true}>
       <Routes location={location} key={location.pathname}>
-     
      <Route path='/' element={ <Main />} />
      <Route path='/about' element={ <About />} />
      <Route path='/work' element={ <Work />} />

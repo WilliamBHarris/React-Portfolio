@@ -8,13 +8,23 @@ const variants = {
 
 const Work = () => {
     return (
-        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.2}}>
+        <motion.div >
         <div className='WorkMain'>
+        <motion.h1
+        className="smallName"
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        exit={{y:'-105vh', transition:{ duration: 1}}}
+      >
+        WILLS PROJECTS
+      </motion.h1>
         <motion.h1
         className="showNameWork"
         variants={variants}
         initial="hidden"
         animate="visible"
+        exit={{y:'-105vh', transition:{ duration: 1}}}
       >
         WILLS
       </motion.h1>
@@ -23,6 +33,7 @@ const Work = () => {
         initial={{ opacity: 1, x: "100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1}}
+        exit={{x:'105vw', transition:{ duration: 1}}}
       >
         PROJECTS
       </motion.h1>

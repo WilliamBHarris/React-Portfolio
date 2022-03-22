@@ -156,15 +156,34 @@
   height: 100vh;
   position: absolute;
   width: 20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(2rem, 10vw, 200px);
+  background: black;
+  border-right: 1px solid black;
+  cursor: default;
+  z-index: 1;
+}
+.smallName {
+  font-family: "Montserrat", sans-serif;
+  color: yellow;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: 100vh;
+  position: absolute;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 200px;
+  font-size: clamp(1rem, 10vw, 50px);
   background: black;
   border-right: 1px solid black;
-  cursor:default;
+  cursor: default;
   z-index: 1;
 }
+
 .showNameWork {
   font-family: "Montserrat", sans-serif;
   color: yellow;
@@ -177,10 +196,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 140px;
+  font-size: clamp(2rem, 10vw, 140px);
   background: black;
   border-right: 1px solid black;
-  cursor:default;
+  cursor: default;
   z-index: 1;
 }
 
@@ -196,10 +215,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 150px;
+  font-size: clamp(2rem, 10vw, 140px);
   background: black;
   border-right: 1px solid black;
-  cursor:default;
+  cursor: default;
   z-index: 1;
 }
 
@@ -216,16 +235,16 @@
   letter-spacing: -10px;
   justify-content: center;
   align-items: center;
-  font-size: 120px;
+  font-size: clamp(2rem, 10vw, 100px);
   background: black;
   border-right: 1px solid black;
-  cursor:default;
+  cursor: default;
   z-index: 1;
 }
 .showNameLastWork {
   font-family: "Montserrat", sans-serif;
   color: yellow;
-  height: 30vh;
+  height: 20%;
   position: absolute;
   width: 80%;
   right: 0;
@@ -233,28 +252,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 150px;
+  font-size: clamp(2rem, 10vw, 140px);
   letter-spacing: 20px;
   background: black;
   z-index: 1;
-  cursor:default;
+  cursor: default;
 }
 .showNameLast {
   font-family: "Montserrat", sans-serif;
   color: yellow;
-  height: 30vh;
+  height: 20%;
   position: absolute;
-  width: 80%;
+  width: min(80%, 100vw);
   right: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 200px;
-  letter-spacing: 90px;
+  font-size: clamp(2rem, 10vw, 200px);
+  letter-spacing: 50px;
   background: black;
   z-index: 1;
-  cursor:default;
+  cursor: default;
+}
+
+@media screen and (max-width: 730px) {
+  .showNameLast,
+  .showName,
+  .regNav,
+  .showNameAbout,
+  .showNameContact,
+  .showNameLastWork,
+  .showNameWork {
+    visibility: hidden;
+  }
+  .smallNav {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 730px) {
+  .hamMenu {
+    visibility: hidden;
+  }
+}
+
+.mobileLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 20px;
+  color: yellow;
+  z-index: 1;
+  background: black;
+  padding-top: 80px;
+}
+.mobileLinkBox {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 70%;
+  top: 0%;
+}
+
+.hamMenu {
+  background: yellow;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 1%;
+  z-index: 1;
+  width: 100px;
+}
+.hamMenuClose {
+  background: black;
+  color: yellow;
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  z-index: 1;
 }
 
 .links {
@@ -269,31 +351,20 @@
   font-weight: 700;
 }
 
-.indLinkMid {
-  background: black;
-  color: yellow;
-  font-family: "Montserrat", sans-serif;
-  padding: 20px 40px;
-  margin-top: 50px;
-  position: absolute;
-  top: 0;
-  right: 45%;
-}
-
 .mainDesc {
   position: absolute;
   right: 6%;
   margin-top: 150px;
   font-family: "Montserrat", sans-serif;
-  font-size: 100px;
+  font-size: clamp(2rem, 5vw, 100px);
 }
 
 .mainDesc1 {
   position: absolute;
   right: 6%;
-  margin-top: 280px;
+  margin-top: 290px;
   font-family: "Montserrat", sans-serif;
-  font-size: 100px;
+  font-size: clamp(2rem, 5vw, 100px);
 }
 
 .mainDesc2 {
@@ -301,7 +372,7 @@
   right: 6%;
   margin-top: 420px;
   font-family: "Montserrat", sans-serif;
-  font-size: 100px;
+  font-size: clamp(2rem, 5vw, 100px);
 }
 
 .mainDesc3 {
@@ -309,5 +380,9 @@
   right: 6%;
   margin-top: 550px;
   font-family: "Montserrat", sans-serif;
-  font-size: 100px;
+  font-size: clamp(2rem, 5vw, 100px);
+}
+
+.mobileNav {
+  display: none;
 }

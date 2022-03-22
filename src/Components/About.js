@@ -8,14 +8,23 @@ const variants = {
 
 const About = () => {
     return (
-        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.2}}>
+        <motion.div >
         <div className='AboutMain'>
-           {/* <Link to='/'> <h1>About</h1></Link> */}
+        <motion.h1
+        className="smallName"
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        exit={{y:'-105vh', transition:{ duration: 1}}}
+      >
+        ABOUT WILL
+      </motion.h1>
            <motion.h1
         className="showNameAbout"
         variants={variants}
         initial="hidden"
         animate="visible"
+        exit={{y:'-105vh', transition:{ duration: 1}}}
       >
         ABOUT
       </motion.h1>
@@ -24,6 +33,7 @@ const About = () => {
         initial={{ opacity: 1, x: "100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
+        exit={{x:'105vw', transition:{ duration: 1}}}
       >
         WILL
       </motion.h1>

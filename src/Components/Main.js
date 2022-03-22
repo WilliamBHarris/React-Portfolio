@@ -8,7 +8,7 @@ const variants = {
 };
 const imgVariants = {
   hidden: { opacity: 0, x: 0 },
-  visible: { opacity: 0.5, x: 0, transition: { duration: 1, delay: 1.5 } },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.5 } },
 };
 
 const Main = () => {
@@ -51,10 +51,20 @@ const Main = () => {
         Enthusiast.
       </motion.h1>
       <motion.h1
+        className="smallName"
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        exit={{y:'-105vh', transition:{ duration: 1}}}
+      >
+        WILL HARRIS
+      </motion.h1>
+      <motion.h1
         className="showName"
         variants={variants}
         initial="hidden"
         animate="visible"
+        exit={{y:'-105vh', transition:{ duration: 1}}}
       >
         WILL
       </motion.h1>
@@ -63,17 +73,18 @@ const Main = () => {
         initial={{ opacity: 1, x: "100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1}}
+        exit={{x:'105vw', transition:{ duration: 1}}}
       >
         HARRIS
       </motion.h1>
-      <motion.img
+      {/* <motion.img
         drag
         variants={imgVariants}
         initial="hidden"
         animate="visible"
         className="personImg"
         src={person}
-      />
+      /> */}
     </motion.div>
   );
 };
