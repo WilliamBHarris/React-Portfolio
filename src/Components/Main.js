@@ -13,15 +13,12 @@ const imgVariants = {
 
 const Main = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <motion.div    >
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
+        exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc"
       >
         Web Developer.
@@ -30,6 +27,7 @@ const Main = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.6 }}
         transition={{ duration: 1, delay: 1.5 }}
+        exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc1"
       >
         Dedicated.
@@ -38,6 +36,7 @@ const Main = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
         transition={{ duration: 1, delay: 2 }}
+        exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc2"
       >
         Designer.
@@ -46,6 +45,7 @@ const Main = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.1 }}
         transition={{ duration: 1, delay: 2.5 }}
+        exit={{opacity: 0, transition: {delay: 0}}}
         className="mainDesc3"
       >
         Enthusiast.

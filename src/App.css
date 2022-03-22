@@ -276,7 +276,7 @@
   cursor: default;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 800px) {
   .showNameLast,
   .showName,
   .regNav,
@@ -292,7 +292,7 @@
     flex-direction: column;
   }
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 800px) {
   .hamMenu {
     visibility: hidden;
   }
