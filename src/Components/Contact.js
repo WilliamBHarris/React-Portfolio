@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import {FaGithub} from 'react-icons/fa'
+import {BsFacebook} from 'react-icons/bs'
+import {AiFillTwitterCircle} from 'react-icons/ai'
+import {AiOutlineMail } from 'react-icons/ai'
+import {AiFillInstagram } from 'react-icons/ai'
+import {AiFillLinkedin } from 'react-icons/ai'
 
 
 const variants = {
@@ -38,7 +44,19 @@ const Contact = () => {
       >
         WILL
       </motion.h1>
-      <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>This is the contact box.</motion.div>
+      <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>
+        <FaGithub size='50px' className='githubLogo' />
+        <BsFacebook size='50px' className='facebookLogo' />
+        <AiFillTwitterCircle size= '50px' className='twitterLogo' />
+        <AiOutlineMail size='50px' className='mailLogo' />
+        <AiFillInstagram size='50px' className='instagramLogo' />
+        <AiFillLinkedin size='50px' className='linkedInLogo' />
+        
+        <div className="contactTitle">
+          <h1>Talk to me.</h1>
+          
+        </div>
+      </motion.div>
         </div>
         </motion.div>
     )
