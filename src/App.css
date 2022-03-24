@@ -22,7 +22,6 @@
 
 .mainNav {
   width: 80%;
-  height: 100%;
   float: right;
   position: absolute;
   right: 0;
@@ -66,41 +65,55 @@
 
 .contactTitle {
   padding: 20px;
-  color: black;  
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  font-size: 30px;
 }
 
 .githubLogo {
   position: absolute;
-  top: 30%;
+  top: 10%;
+  color: black;
 }
 
 .facebookLogo {
   position: absolute;
-  top: 30%;
-  margin-right: 150px;
+  top: 20%;
+  margin-right: 400px;
+  cursor: pointer;
+  color: black;
 }
 
 .twitterLogo {
   position: absolute;
-  top: 30%;
-  margin-left: 150px;
+  top: 20%;
+  margin-left: 400px;
+  cursor: pointer;
+  color: black;
 }
 
 .mailLogo {
   position: absolute;
-  bottom: 30%;
-  margin-left: 150px;
+  bottom: 20%;
+  margin-left: 400px;
+  cursor: pointer;
+  color: black;
 }
 
 .instagramLogo {
   position: absolute;
-  bottom: 30%;
-  margin-right: 150px;
+  bottom: 20%;
+  margin-right: 400px;
+  cursor: pointer;
+  color: black;
 }
 
 .linkedInLogo {
   position: absolute;
-  bottom: 30%;
+  bottom: 10%;
+  cursor: pointer;
+  color: black;
 }
 
 
@@ -157,10 +170,10 @@
 }
 
 .personImg {
-  height: 1200px;
+  height: 800px;
   position: absolute;
-  bottom: -40%;
-  left: 15%;
+  bottom: -21%;
+  left: 5%;
   margin-bottom: 60px;
   margin-right: 20px;
   z-index: 0;

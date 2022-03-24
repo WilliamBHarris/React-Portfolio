@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import person from "../assets/person.png";
+import person from "../assets/person.png";
 
 const variants = {
   hidden: { opacity: 1, y: "-100vh" },
   visible: { opacity: 1, transition: { duration: 1, delay: 0 }, y: 0 },
 };
-// const imgVariants = {
-//   hidden: { opacity: 0, x: 0 },
-//   visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.5 } },
-// };
+const imgVariants = {
+  hidden: { opacity: 0, x: 0 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 } },
+};
 
 const Main = () => {
   return (
@@ -77,7 +77,7 @@ const Main = () => {
       >
         HARRIS
       </motion.h1>
-      {/* <motion.img
+      <motion.img
         drag
         variants={imgVariants}
         initial="hidden"
@@ -85,7 +85,7 @@ const Main = () => {
         exit={{opacity: 0, transition:{delay: 0}}}
         className="personImg"
         src={person}
-      /> */}
+      />
     </motion.div>
   );
 };

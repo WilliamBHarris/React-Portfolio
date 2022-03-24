@@ -6,6 +6,7 @@ import {AiFillTwitterCircle} from 'react-icons/ai'
 import {AiOutlineMail } from 'react-icons/ai'
 import {AiFillInstagram } from 'react-icons/ai'
 import {AiFillLinkedin } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 
 const variants = {
@@ -45,15 +46,15 @@ const Contact = () => {
         WILL
       </motion.h1>
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>
-        <FaGithub size='50px' className='githubLogo' />
-        <BsFacebook size='50px' className='facebookLogo' />
-        <AiFillTwitterCircle size= '50px' className='twitterLogo' />
-        <AiOutlineMail size='50px' className='mailLogo' />
-        <AiFillInstagram size='50px' className='instagramLogo' />
-        <AiFillLinkedin size='50px' className='linkedInLogo' />
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Facebook.com" className='facebookLogo'><BsFacebook size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Twitter.com" className='twitterLogo'><AiFillTwitterCircle size= '105px' /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Email.com" className='mailLogo' ><AiOutlineMail size='100px' /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Instagram.com" className='instagramLogo'><AiFillInstagram size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.LinkedIn.com" className='linkedInLogo'><AiFillLinkedin size='100px'  /></motion.a>
         
         <div className="contactTitle">
-          <h1>Talk to me.</h1>
+          <h1>Connect with me.</h1>
           
         </div>
       </motion.div>
