@@ -6,8 +6,6 @@ import {AiFillTwitterCircle} from 'react-icons/ai'
 import {AiOutlineMail } from 'react-icons/ai'
 import {AiFillInstagram } from 'react-icons/ai'
 import {AiFillLinkedin } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-
 
 const variants = {
     hidden: { opacity: 1, y: "-100vh" },
@@ -46,15 +44,15 @@ const Contact = () => {
         WILL
       </motion.h1>
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub size='100px'  /></motion.a>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Facebook.com" className='facebookLogo'><BsFacebook size='100px'  /></motion.a>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Twitter.com" className='twitterLogo'><AiFillTwitterCircle size= '105px' /></motion.a>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Email.com" className='mailLogo' ><AiOutlineMail size='100px' /></motion.a>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.Instagram.com" className='instagramLogo'><AiFillInstagram size='100px'  /></motion.a>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3}}} target='_blank' href="www.LinkedIn.com" className='linkedInLogo'><AiFillLinkedin size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5, duration: .5}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Facebook.com" className='facebookLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1, duration: .5}}}><BsFacebook size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Twitter.com" className='twitterLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.5, duration: .5}}}><AiFillTwitterCircle size= '105px' /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='email' href="www.email.com" className='mailLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .3, duration: .5}}} ><AiOutlineMail size='100px' /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Instagram.com" className='instagramLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8, duration: .5}}}><AiFillInstagram size='100px'  /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href='www.LinkedIn.com' className='linkedInLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.3, duration: .5}}}><AiFillLinkedin size='100px'  /></motion.a>
         
         <div className="contactTitle">
-          <h1>Connect with me.</h1>
+          <h1>Lets <span style={{background: 'black', color: 'yellow', padding: 20}}>CONNECT.</span></h1>
           
         </div>
       </motion.div>

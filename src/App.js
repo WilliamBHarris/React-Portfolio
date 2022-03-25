@@ -20,7 +20,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 1)
+    }, 3000)
   }, [])
 
   return (
@@ -30,10 +30,13 @@ function App() {
        
       { loading ? 
       <div className="loader">
-        <p className='loadingText'>Always learning...</p>
+        <motion.div initial={{opacity: 1}} animate={{opacity: 1}} transition={{duration: 1.5}} className='loadingText'>
+          <motion.p initial={{x: -25}} animate={{x: 0}} transition={{duration: .5, repeat: Infinity, repeatType: 'reverse', ease:'easeInOut'}} className="loadW">W</motion.p>
+          <motion.p initial={{x: 25}} animate={{x: 0, fontWeight: 'bold'}} transition={{duration: .5, repeat: Infinity, repeatType: 'reverse', ease:'easeInOut'}} className="loadH">H</motion.p>
+          </motion.div>
       <ScaleLoader 
-      size={310}
-      color={'black'}
+      size={500}
+      color={'yellow'}
       loading={loading}
       />
       </div>
