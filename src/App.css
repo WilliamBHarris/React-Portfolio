@@ -58,6 +58,36 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: visible;
+}
+
+.aboutTitle {
+  align-self: flex-start;
+  margin-top: 30px;
+  padding: 20px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+
+.palmTrees {
+  position: absolute;
+  bottom: -20%;
+  left: -15%;
+  height: 500px;
+  width: 500px;
+}
+
+.infoBox {
+  height: 100%;
+  width: 92%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items:flex-end;
+  overflow:visible;
 }
 
 .aboutText {
@@ -66,42 +96,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 10%;
-  right: 4%;
-}
-.aboutText1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 25%;
-  right: 4%;
-  
-}
-.aboutText2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 40%;
-  right: 4%;
-  
-}
-.aboutText3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 55%;
-  right: 4%;
-  
+  margin: 10px 0 0 0;
 }
 
 .aboutSpan {
@@ -112,11 +107,85 @@
   font-weight: bold;
 }
 
+.infoIcon {
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.langIcon {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.personIcon {
+  position: absolute;
+  top: 30%;
+  left: 21%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.peaceSign {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  bottom: -13%;
+  left: 39%;
+}
+
+
+.langTitle {
+  position: absolute;
+  bottom: 25%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+
 .langDiv {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+.techIcons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: flex-end;
+  height: 20%;
+}
+
+.subtitleText {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  padding-top: 250px;
+  font-size: 25px;
+  letter-spacing: 0px;
+}
+
+.aboutImages {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.imgDiv {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
 }
 
 .contactMain {

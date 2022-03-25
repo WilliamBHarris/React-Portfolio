@@ -24,7 +24,7 @@ const Work = () => {
         variants={variants}
         initial="hidden"
         animate="visible"
-        exit={{y:'-105vh', transition:{ duration: 1}}}
+        exit={{y:'-105vh', transition:{ duration: 1, delay: .5}}}
       >
         WILLS
       </motion.h1>
@@ -33,7 +33,7 @@ const Work = () => {
         initial={{ opacity: 1, x: "100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1}}
-        exit={{x:'105vw', transition:{ duration: 1}}}
+        exit={{x:'105vw', transition:{ duration: 1, delay: .5}}}
       >
         PROJECTS
       </motion.h1>

@@ -30,7 +30,7 @@ const Contact = () => {
         variants={variants}
         initial="hidden"
         animate="visible"
-        exit={{y:'-105vh', transition:{ duration: 1}}}
+        exit={{y:'-105vh', transition:{ duration: 1, delay: .5}}}
       >
         CONTACT
       </motion.h1>
@@ -39,7 +39,7 @@ const Contact = () => {
         initial={{ opacity: 1, x: "100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1}}
-        exit={{x:'105vw', transition:{ duration: 1}}}
+        exit={{x:'105vw', transition:{ duration: 1, delay: .5}}}
       >
         WILL
       </motion.h1>
@@ -47,7 +47,7 @@ const Contact = () => {
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5, duration: .5}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub size='100px'  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Facebook.com" className='facebookLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1, duration: .5}}}><BsFacebook size='100px'  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Twitter.com" className='twitterLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.5, duration: .5}}}><AiFillTwitterCircle size= '105px' /></motion.a>
-        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='email' href="www.email.com" className='mailLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .3, duration: .5}}} ><AiOutlineMail size='100px' /></motion.a>
+        <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='email' href="www.email.com" className='mailLogo' initial={{opacity: .3}} animate={{opacity: 1, transition: {delay: .7, duration: .5, repeatType: 'reverse', repeat: Infinity}}} ><AiOutlineMail size='100px' /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Instagram.com" className='instagramLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8, duration: .5}}}><AiFillInstagram size='100px'  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href='www.LinkedIn.com' className='linkedInLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.3, duration: .5}}}><AiFillLinkedin size='100px'  /></motion.a>
         

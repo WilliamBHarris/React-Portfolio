@@ -8,7 +8,7 @@ const variants = {
 };
 const imgVariants = {
   hidden: { opacity: 0, x: 0 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1.5, delay: 1 } },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, delay: .8 } },
 };
 
 const Main = () => {
@@ -53,7 +53,7 @@ const Main = () => {
       <motion.div
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.9 }}
+        transition={{ duration: 1, delay: 2.2 }}
         
         exit={{opacity: 0, transition: {delay: 0}}}
         className="resume"
@@ -74,7 +74,7 @@ const Main = () => {
         variants={variants}
         initial="hidden"
         animate="visible"
-        exit={{y:'-105vh', transition:{ duration: 1}}}
+        exit={{y:'-105vh', transition:{ duration: 1, delay: .5}}}
       >
         WILL
       </motion.h1>
@@ -83,7 +83,7 @@ const Main = () => {
         initial={{ opacity: 1, x: "100vw" }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1}}
-        exit={{x:'105vw', transition:{ duration: 1}}}
+        exit={{x:'105vw', transition:{ duration: 1, delay: .5}}}
       >
         HARRIS
       </motion.h1>
