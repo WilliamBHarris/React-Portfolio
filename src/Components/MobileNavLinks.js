@@ -9,7 +9,7 @@ const MobileNavLinks = (props) => {
         <motion.ul
           initial={{ opacity: 1, x: 400 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: .5}}
+          transition={{ duration: .1}}
           className='mobileLink'
         >
           <Link className="links" to="/work">

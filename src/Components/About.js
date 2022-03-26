@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiJavascript } from "react-icons/si";
 import { SiHtml5 } from "react-icons/si";
@@ -18,11 +18,11 @@ const About = () => {
   const [info, setInfo] = useState(false);
   const [lang, setLang] = useState(false);
   const [person, setPerson] = useState(false);
-  const [subtitle, setSubtitle] = useState('');
+  const [subtitle, setSubtitle] = useState("");
 
   const variants = {
-    hidden: { opacity: 1, y: "-100vh" },
-    visible: { opacity: 1, transition: { duration: 1, delay: 0 }, y: 0 },
+    hidden: { opacity: 1, x: -300 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0 }, y: 0 },
   };
 
   const handleClickLang = () => {
@@ -42,13 +42,13 @@ const About = () => {
   };
 
   const handleRover = () => {
-    setSubtitle('info.');
+    setSubtitle("info.");
   };
   const handleRover1 = () => {
-    setSubtitle('pictures.');
+    setSubtitle("pictures.");
   };
   const handleRover2 = () => {
-    setSubtitle('code.');
+    setSubtitle("code.");
   };
   const handleRoverOut = () => {
     setSubtitle(false);
@@ -80,28 +80,34 @@ const About = () => {
           variants={variants}
           initial="hidden"
           animate="visible"
-          exit={{ y: "-105vh", transition: { duration: 1 } }}
+          exit={{ x: -300, transition: { duration: 1 } }}
         >
           ABOUT WILL
         </motion.h1>
-        <motion.h1
-          className="showNameAbout"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          exit={{ y: "-105vh", transition: { duration: 1, delay: 0.5 } }}
-        >
-          ABOUT
-        </motion.h1>
-        <motion.h1
-          className="showNameLast"
-          initial={{ opacity: 1, x: "100vw" }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          exit={{ x: "105vw", transition: { duration: 1, delay: 0.5 } }}
-        >
-          WILL
-        </motion.h1>
+        <div className="showNameAbout">
+          {" "}
+          <motion.h1
+            className="showNameAboutText"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            exit={{ opacity: 0, x: -300, transition: { duration: 1 } }}
+          >
+            ABOUT
+          </motion.h1>
+        </div>
+        <div className="showNameLast">
+          <motion.h1
+            className="showNameLastText"
+            initial={{ opacity: 1, y: 300 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            exit={{ opacity: 0, y: 300, transition: { duration: 1 } }}
+          >
+            WILL
+          </motion.h1>
+        </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -110,32 +116,22 @@ const About = () => {
           className="aboutBox"
         >
           <div className="aboutTitle">
-            <h1>
-              Hello
-              <span
-                style={{ background: "black", color: "yellow", padding: 20 }}
-              >
-                WORLD!
-              </span>
-            </h1>
+            <h1>Hello</h1>
+            <h1 className="connectSpan">WORLD!</h1>
+          </div>
+          <div>
             <AnimatePresence exitBeforeEnter>
               {!info && !lang && !person ? (
                 <>
                   {!subtitle ? (
-                      
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ duration: .5, delay: 0.5 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className='chooseIcon'
                       exit={{ opacity: 0, transition: { duration: 0.3 } }}
                       style={{
-                        visibility: !subtitle ? 'visible' : 'hidden', 
-                        textAlign: "center",
-                        paddingTop: "250px",
-                        fontSize: "25px",
-                        letterSpacing: "0px",
-                      }}
-                    >
+                        visibility: !subtitle ? "visible" : "hidden"}}                    >
                       <AiOutlineArrowUp
                         style={{ marginRight: "10px", paddingTop: "5px" }}
                       />
@@ -144,20 +140,11 @@ const About = () => {
                         style={{ marginLeft: "10px", paddingTop: "5px" }}
                       />
                     </motion.p>
-                  ) : <p className="subtitleText" style={style.active5}>
-                  {subtitle}
-                </p>
-              }
-                  <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.7 }}
-                    exit={{ opacity: 0, transition: { duration: 0.3 } }}
-                    style={style.active3}
-                    className="peaceSign"
-                    src={peace}
-                    alt="peace sign"
-                  />{" "}
+                  ) : (
+                    <p className="subtitleText" style={style.active5}>
+                      {subtitle}
+                    </p>
+                  )}
                 </>
               ) : null}
             </AnimatePresence>
@@ -172,24 +159,22 @@ const About = () => {
                 className="infoBox"
               >
                 <p className="aboutText">
-                  Hello! I am a Tampa, FL based freelance{" "}
-                  <span className="aboutSpan">web developer.</span>
+                  Hello! I am a Tampa, FL based freelance web developer.
                 </p>
                 <p className="aboutText">
-                  Focused on learning more about{" "}
-                  <span className="aboutSpan">code everyday.</span>
+                  Focused on learning more about code everyday.
                 </p>
                 <p className="aboutText">
-                  Working hard to create{" "}
-                  <span className="aboutSpan">opportunities.</span>
+                  Working hard to create opportunities.
                 </p>
                 <p className="aboutText">
-                  All in pursuit to{" "}
-                  <span className="aboutSpan">land a job.</span>
+                  All in pursuit to land a job.
                 </p>
-                <img className="palmTrees" src={Trees} alt="Palm Trees" />
+                 <img className="palmTrees" src={Trees} alt="Palm Trees" /> 
+                 <img className="palmTrees2" src={Trees} alt="Palm Trees" /> 
               </motion.div>
             )}
+            
           </AnimatePresence>
 
           <motion.div
@@ -202,8 +187,8 @@ const About = () => {
             className="infoIcon"
           >
             <BsFillInfoSquareFill
+              className="socialLogo"
               style={style.active}
-              size={80}
               onMouseEnter={handleRover}
               onMouseLeave={handleRoverOut}
               onClick={handleClickInfo}
@@ -220,10 +205,10 @@ const About = () => {
           >
             {" "}
             <MdOutlineDeveloperMode
-            onMouseEnter={handleRover2}
-            onMouseLeave={handleRoverOut}
+              className="socialLogo"
+              onMouseEnter={handleRover2}
+              onMouseLeave={handleRoverOut}
               style={style.active1}
-              size={80}
               onClick={handleClickLang}
             />
           </motion.div>
@@ -236,12 +221,11 @@ const About = () => {
             animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.5 } }}
             className="personIcon"
           >
-
             <BsFilePerson
-            onMouseEnter={handleRover1}
-            onMouseLeave={handleRoverOut}
+              className="socialLogo"
+              onMouseEnter={handleRover1}
+              onMouseLeave={handleRoverOut}
               style={style.active2}
-              size={80}
               onClick={handleClickPerson}
             />
           </motion.div>
@@ -288,16 +272,49 @@ const About = () => {
                 exit={{ opacity: 0, transition: { duration: 0.3 } }}
                 className="langDiv"
               >
-                <div className="aboutImages">
-                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/200/300' /></div>
-                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/201/300' /></div>
-                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/202/300' /></div>
-                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/203/300' /></div>
+                <div className="aboutImages" scroll>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/200/300"
+                    />
+                  </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/201/300"
+                    />
+                  </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/202/300"
+                    />
+                  </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/203/300"
+                    />
+                  </div>
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
+        
+        <div className="peaceDiv">
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
+            style={style.active3}
+            className="peaceSign"
+            src={peace}
+            alt="peace sign"
+          />
+        </div>
       </div>
     </motion.div>
   );

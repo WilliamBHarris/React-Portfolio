@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 const variants = {
-    hidden: { opacity: 1, y: "-100vh" },
-    visible: { opacity: 1, transition: { duration: 1, delay: 0 }, y: 0 },
+    hidden: { opacity: 1, x: -300 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0 }, y: 0 },
   };
 
 const Work = () => {
@@ -15,28 +15,29 @@ const Work = () => {
         variants={variants}
         initial="hidden"
         animate="visible"
-        exit={{y:'-105vh', transition:{ duration: 1}}}
+        exit={{x: -300, transition:{ duration: 1}}}
       >
         WILLS PROJECTS
       </motion.h1>
-        <motion.h1
-        className="showNameWork"
+      <div className='showNameWork'><motion.h1
+        className="showNameText"
         variants={variants}
         initial="hidden"
         animate="visible"
-        exit={{y:'-105vh', transition:{ duration: 1, delay: .5}}}
+        exit={{x: -300, transition:{ duration: 1}}}
       >
         WILLS
-      </motion.h1>
-      <motion.h1
-        className="showNameLastWork"
-        initial={{ opacity: 1, x: "100vw" }}
-        animate={{ opacity: 1, x: 0 }}
+      </motion.h1></div>
+        <div className='showNameLastWork'><motion.h1
+        className="showNameText"
+        initial={{ opacity: 1, y: 300 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1}}
-        exit={{x:'105vw', transition:{ duration: 1, delay: .5}}}
+        exit={{y: 300, transition:{ duration: 1}}}
       >
         PROJECTS
-      </motion.h1>
+      </motion.h1></div>
+      
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>This is the project box.</motion.div>
         </div>
         </motion.div>
