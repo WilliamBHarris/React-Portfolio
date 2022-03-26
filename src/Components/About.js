@@ -18,7 +18,7 @@ const About = () => {
   const [info, setInfo] = useState(false);
   const [lang, setLang] = useState(false);
   const [person, setPerson] = useState(false);
-  const [subtitle, setSubtitle] = useState(false);
+  const [subtitle, setSubtitle] = useState('');
 
   const variants = {
     hidden: { opacity: 1, y: "-100vh" },
@@ -42,7 +42,16 @@ const About = () => {
   };
 
   const handleRover = () => {
-    setSubtitle(!subtitle);
+    setSubtitle('info.');
+  };
+  const handleRover1 = () => {
+    setSubtitle('pictures.');
+  };
+  const handleRover2 = () => {
+    setSubtitle('code.');
+  };
+  const handleRoverOut = () => {
+    setSubtitle(false);
   };
 
   const style = {
@@ -117,7 +126,7 @@ const About = () => {
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ duration: 1, delay: 0.5 }}
+                      transition={{ duration: .5, delay: 0.5 }}
                       exit={{ opacity: 0, transition: { duration: 0.3 } }}
                       style={{
                         visibility: !subtitle ? 'visible' : 'hidden', 
@@ -135,10 +144,10 @@ const About = () => {
                         style={{ marginLeft: "10px", paddingTop: "5px" }}
                       />
                     </motion.p>
-                  ) : (<p className="subtitleText" style={style.active5}>
-                  Information
+                  ) : <p className="subtitleText" style={style.active5}>
+                  {subtitle}
                 </p>
-              )}
+              }
                   <motion.img
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -196,7 +205,7 @@ const About = () => {
               style={style.active}
               size={80}
               onMouseEnter={handleRover}
-              onMouseLeave={handleRover}
+              onMouseLeave={handleRoverOut}
               onClick={handleClickInfo}
             />
           </motion.div>
@@ -211,6 +220,8 @@ const About = () => {
           >
             {" "}
             <MdOutlineDeveloperMode
+            onMouseEnter={handleRover2}
+            onMouseLeave={handleRoverOut}
               style={style.active1}
               size={80}
               onClick={handleClickLang}
@@ -225,8 +236,10 @@ const About = () => {
             animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.5 } }}
             className="personIcon"
           >
-            {" "}
+
             <BsFilePerson
+            onMouseEnter={handleRover1}
+            onMouseLeave={handleRoverOut}
               style={style.active2}
               size={80}
               onClick={handleClickPerson}
@@ -276,10 +289,10 @@ const About = () => {
                 className="langDiv"
               >
                 <div className="aboutImages">
-                  <div className="imgDiv"></div>
-                  <div className="imgDiv"></div>
-                  <div className="imgDiv"></div>
-                  <div className="imgDiv"></div>
+                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/200/300' /></div>
+                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/201/300' /></div>
+                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/202/300' /></div>
+                  <div className="imgDiv"><img alt="this is me" src='https://picsum.photos/id/203/300' /></div>
                 </div>
               </motion.div>
             )}
