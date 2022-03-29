@@ -1,10 +1,11 @@
-import { useState} from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiJavascript } from "react-icons/si";
 import { SiHtml5 } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiReact } from "react-icons/si";
 import { SiNodedotjs } from "react-icons/si";
+import { SiAdobe } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { BsFillInfoSquareFill } from "react-icons/bs";
@@ -75,8 +76,6 @@ const About = () => {
   return (
     <motion.div>
       <div className="AboutMain">
-     
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -84,68 +83,11 @@ const About = () => {
           exit={{ opacity: 0, transition: { duration: 0.7, delay: 0 } }}
           className="aboutBox"
         >
-          <div className="aboutTitle">
-            <h1>Hello</h1>
-            <h1 className="connectSpan">WORLD!</h1>
+          <div className='titleBox'>
+          <h1 className="aboutTitle">Hello</h1>
+          <h1 className="connectSpan aboutTitle">WORLD!</h1>
           </div>
-          <div>
-            <AnimatePresence exitBeforeEnter>
-              {!info && !lang && !person ? (
-                <>
-                  {!subtitle ? (
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5, delay: 0.5 }}
-                      className='chooseIcon'
-                      exit={{ opacity: 0, transition: { duration: 0.3 } }}
-                      style={{
-                        visibility: !subtitle ? "visible" : "hidden"}}                    >
-                      <AiOutlineArrowUp
-                        style={{ marginRight: "10px", paddingTop: "5px" }}
-                      />
-                      Choose an icon
-                      <AiOutlineArrowUp
-                        style={{ marginLeft: "10px", paddingTop: "5px" }}
-                      />
-                    </motion.p>
-                  ) : (
-                    <p className="subtitleText" style={style.active5}>
-                      {subtitle}
-                    </p>
-                  )}
-                </>
-              ) : null}
-            </AnimatePresence>
-          </div>
-          <AnimatePresence exitBeforeEnter>
-            {info && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.8 }}
-                exit={{ opacity: 0, transition: { duration: 0.3 } }}
-                className="infoBox"
-              >
-                <p className="aboutText">
-                  Hello! I am a Tampa, FL based freelance web developer.
-                </p>
-                <p className="aboutText">
-                  Focused on learning more about code everyday.
-                </p>
-                <p className="aboutText">
-                  Working hard to create opportunities.
-                </p>
-                <p className="aboutText">
-                  All in pursuit to land a job.
-                </p>
-                 <img className="palmTrees" src={Trees} alt="Palm Trees" /> 
-                 <img className="palmTrees2" src={Trees} alt="Palm Trees" /> 
-              </motion.div>
-            )}
-            
-          </AnimatePresence>
-
+          <div className='iconBox'>
           <motion.div
             whileHover={{
               scale: 1.3,
@@ -198,7 +140,66 @@ const About = () => {
               onClick={handleClickPerson}
             />
           </motion.div>
-
+          <div className='chooseBox'>
+            <AnimatePresence exitBeforeEnter>
+              {!info && !lang && !person ? (
+                <>
+                  {!subtitle ? (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className="chooseIcon"
+                      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+                      style={{
+                        visibility: !subtitle ? "visible" : "hidden",
+                      }}
+                    >
+                      <AiOutlineArrowUp
+                        style={{ marginRight: "10px", paddingTop: "5px" }}
+                      />
+                      Choose an icon
+                      <AiOutlineArrowUp
+                        style={{ marginLeft: "10px", paddingTop: "5px" }}
+                      />
+                    </motion.p>
+                  ) : (
+                    <p className="subtitleText" style={style.active5}>
+                      {subtitle}
+                    </p>
+                  )}
+                </>
+              ) : null}
+            </AnimatePresence>
+          </div>
+          </div>
+          
+          
+          <AnimatePresence exitBeforeEnter>
+            {info && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1, duration: 0.8 }}
+                exit={{ opacity: 0, transition: { duration: 0.3 } }}
+                className="infoBox"
+              >
+                <p className="aboutText">
+                  Hello! I am a Tampa, FL based freelance web developer.
+                </p>
+                <p className="aboutText">
+                  Focused on learning more about code everyday.
+                </p>
+                <p className="aboutText">
+                  Working hard to create opportunities.
+                </p>
+                <p className="aboutText">All in pursuit to land a job.</p>
+                <img className="palmTrees" src={Trees} alt="Palm Trees" />
+                <img className="palmTrees2" src={Trees} alt="Palm Trees" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+              
           <AnimatePresence exitBeforeEnter>
             {lang && (
               <motion.div
@@ -215,20 +216,21 @@ const About = () => {
                       background: "#17252A",
                       color: "white",
                       padding: 20,
-                      borderRadius: 10
+                      borderRadius: 10,
                     }}
                   >
                     FOCUS.
                   </span>
                 </h1>
                 <div className="techIcons">
-                  <SiJavascript size={120} />
-                  <SiHtml5 size={120} />
-                  <SiCss3 size={120} />
-                  <SiReact size={120} />
-                  <SiNodedotjs size={120} />
-                  <SiPostgresql size={120} />
-                  <SiTypescript size={120} />
+                  <SiJavascript className="socialLogo" />
+                  <SiHtml5 className="socialLogo" />
+                  <SiCss3 className="socialLogo" />
+                  <SiReact className="socialLogo" />
+                  <SiNodedotjs className="socialLogo" />
+                  <SiPostgresql className="socialLogo" />
+                  <SiTypescript className="socialLogo" />
+                  <SiAdobe className="socialLogo" />
                 </div>
               </motion.div>
             )}

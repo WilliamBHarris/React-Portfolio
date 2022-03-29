@@ -44,9 +44,9 @@ function App() {
     : 
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: .3}}>
     
-    <motion.div initial={{opacity: 0.8,y: 20, x: 30}} animate={{opacity: 1 ,x:0, y:-10}} transition={{duration: 2, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle'></motion.div>
-      <motion.div initial={{opacity: 0.8,y: 10, x: 30}} animate={{x:0, y: 0, opacity: 1}} transition={{duration: 3, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle2'></motion.div>
-      <motion.div initial={{opacity: 0.8, y: -30, x: 30}} animate={{x:0, y: 0, opacity: 1}} transition={{duration: 5, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle3'></motion.div>
+    <motion.div initial={{opacity: 0.8,y: 20, x: 30}} animate={{opacity: 1 ,x:0, y:-10}} transition={{duration: 7, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle'></motion.div>
+      <motion.div initial={{opacity: 0.8,y: 10, x: 30}} animate={{x:0, y: 0, opacity: 1}} transition={{duration: 9, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle2'></motion.div>
+      <motion.div initial={{opacity: 0.8, y: -30, x: 30}} animate={{x:0, y: 0, opacity: 1}} transition={{duration: 11, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle3'></motion.div>
       <motion.h1 initial={{opacity: 0, x: 300, rotate: -90}} animate={{opacity: .3, x: 0}} transition={{duration: 2}} className='main-right-border'>Web Developer</motion.h1>
       <motion.h1 initial={{x: -10, opacity: .2}}
         animate={{opacity: .5, x: 10}}

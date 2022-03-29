@@ -24,10 +24,10 @@ const Contact = () => {
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Instagram.com" className='instagramLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .8, duration: .5}}}><AiFillInstagram className="socialLogo" /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href='www.LinkedIn.com' className='linkedInLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.3, duration: .5}}}><AiFillLinkedin className="socialLogo"  /></motion.a>
         
-        <div className="contactTitle">
-          <h1 style={{color: '#17252A'}}>Lets <span style={{color: 'rgb(234, 233, 233)'}} className='connectSpan'>CONNECT.</span></h1>
+        
+          <h1 className='contactTitle' style={{color: '#17252A'}}>Lets <span style={{color: 'rgb(234, 233, 233)'}} className='connectSpan'>CONNECT.</span></h1>
           
-        </div>
+        
       </motion.div>
         </div>
         </motion.div>
