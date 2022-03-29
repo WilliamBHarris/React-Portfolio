@@ -7,33 +7,132 @@
 
 /* Main Show */
 .mainBox {
-  background: black;
+  background: rgb(181, 172, 172);
   height: 100vh;
+  position: relative;
 }
 
 /* Main Nav */
 .logo {
-  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 8px;
+  font-size: clamp(10px, 10vw, 50px);
+  color: rgb(234, 233, 233);
   position: absolute;
-  left: 0;
-  margin-left: 20px;
-  margin-top: -18px;
+  left: 3%;
+  top: 1%;
+  z-index: 10;
 }
 
+.backCircle {
+  border-radius: 35%;
+  background-color: rgb(234, 233, 233);
+  height: 110%;
+  width: 50%;
+  position: absolute;
+  bottom: -10%;
+  right: -15%;
+  z-index: 1;
+}
+.backCircle2 {
+  border-radius: 40%;
+  background-color: #48a29e;
+  height: 110%;
+  width: 50%;
+  position: absolute;
+  bottom: -10%;
+  right: -20%;
+  z-index: 2;
+}
+.backCircle3 {
+  border-radius: 40%;
+  background-color: #336c6c;
+  height: 110%;
+  width: 50%;
+  position: absolute;
+  bottom: -10%;
+  right: -25%;
+  z-index: 3;
+}
+
+.main-right-border {
+  position: absolute;
+  font-size: clamp(10px, 8vw ,130px);
+  color: black;
+  transform: rotate(-90deg);
+  bottom: 37%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  right: -18%;
+  z-index: 4;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #17252A;
+  opacity: .4;
+}
+.main-firstName-border {
+  position: absolute;
+  font-size: clamp(40px, 28vw, 400px);
+  color: rgb(48, 44, 44);
+  bottom: 40%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  left: 3%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(234, 233, 233);
+  opacity: .5;
+}
+.main-lastName-border {
+  position: absolute;
+  font-size: clamp(40px, 28vw, 400px);
+  color: black;
+  
+  bottom: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  left: 3%;
+  z-index: 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(234, 233, 233);;
+  opacity: .5;
+}
+
+.main-name-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(3rem,10vw,150px);
+  position: absolute;
+  color:#17252A;
+  bottom: 60%;
+  left: 10%;
+}
+.main-desc-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(1.3rem, 4vw, 50px);
+  position: absolute;
+  color: #17252A;
+  bottom: 43%;
+  left: clamp(3vw, 207vw, 10%);
+
+}
+
+
 .mainNav {
-  width: 85%;
-  height: 15%;
+  background: #17252A;
+  width: 50%;
+  height: 8vh;
+  border-radius: 0 0 0 15px;
   position: absolute;
   right: 0;
-  z-index: 1;
+  top: 0;
+  margin: auto;
+  z-index: 10;
 }
 
 .navItems {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  
-  align-items: flex-start;
+
+  align-items: center;
   list-style: none;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
@@ -43,26 +142,27 @@
 /* Main Nav End */
 
 .AboutMain {
-  background: yellow;
   height: 100vh;
   position: relative;
 }
 
 .aboutBox {
-  background: 1px solid black;
-  margin-left: 21.5%;
-  width: 72.5%;
-  height: 65vh;
-  margin-top: 125px;
+  background: rgb(181, 172, 172, .2);
+  border-radius: 15px;
+  margin: auto;
+  width: 88%;
+  height: 83vh;
+  margin-top: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: visible;
+  z-index: 4;
 }
 
 .aboutTitle {
-  position:  absolute;
+  position: absolute;
   top: 0;
   font-weight: bold;
   justify-content: flex-end;
@@ -71,7 +171,7 @@
   color: black;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
-  font-size: clamp(10px , 3vw, 30px);
+  font-size: clamp(10px, 3vw, 30px);
 }
 
 .palmTrees {
@@ -87,7 +187,7 @@
   right: -20%;
   max-height: 30vh;
   max-width: 30%;
-  transform: scaleX(-1)
+  transform: scaleX(-1);
 }
 
 .infoBox {
@@ -99,8 +199,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items:center;
-  overflow:visible;
+  align-items: center;
+  overflow: visible;
 }
 
 .aboutText {
@@ -160,7 +260,6 @@
   float: right;
 }
 
-
 .langTitle {
   position: absolute;
   bottom: 25%;
@@ -186,6 +285,7 @@
   justify-content: space-evenly;
   align-self: flex-end;
   height: 20%;
+  color: #17252A;
 }
 
 .subtitleText {
@@ -194,6 +294,7 @@
   margin-top: 150px;
   font-size: clamp(16px, 4vw, 22px);
   letter-spacing: 0px;
+  color: #17252A;
 }
 
 .aboutImages {
@@ -223,37 +324,36 @@
 }
 
 .contactMain {
-  background: yellow;
+  background: rgb(181, 172, 172);
   height: 100vh;
 }
 
 .connectSpan {
-  background: black;
-  color: yellow;
-  padding: 10px;
-}
-
-.connectSpan, h1 {
-  padding: 10px;
+  /* background: white; */
+  border-radius: 10px;
+  padding: 0px 10px;
+  color: #17252A;
+  border: 1px solid #17252A;
 }
 
 .contactTitle {
   padding: 20px;
-  color: black;
+  color: #17252A;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
-  font-size: clamp(17px , 2vw, 25px);
+  font-size: clamp(17px, 2vw, 25px);
   overflow: visible;
 }
 
 @media only screen and (max-width: 637px) {
   .contactTitle {
     display: flex;
-    text-align: right;    
+    text-align: right;
+    position: absolute;
+    top: 35%;
   }
   .contactTitle span {
     background: black;
-    color: yellow;
     padding: 0 10px;
   }
 }
@@ -262,6 +362,7 @@
   position: absolute;
   top: 5%;
   color: black;
+  z-index: 5;
 }
 
 .facebookLogo {
@@ -269,7 +370,8 @@
   top: 20%;
   left: 10%;
   cursor: pointer;
-  color: black;
+  color:  black;
+  z-index: 5;
 }
 
 .twitterLogo {
@@ -278,6 +380,7 @@
   right: 10%;
   cursor: pointer;
   color: black;
+  z-index: 5;
 }
 
 .mailLogo {
@@ -286,10 +389,12 @@
   right: 10%;
   cursor: pointer;
   color: black;
+  z-index: 5;
 }
 
 .socialLogo {
-  font-size: clamp(65px, 10vw, 100px);
+  font-size: clamp(65px, 10vw, 200px);
+  color: #17252A;
 }
 
 .instagramLogo {
@@ -298,6 +403,7 @@
   left: 10%;
   cursor: pointer;
   color: black;
+  z-index: 5;
 }
 
 .linkedInLogo {
@@ -305,12 +411,7 @@
   bottom: 5%;
   cursor: pointer;
   color: black;
-}
-
-
-.WorkMain {
-  background: yellow;
-  height: 100vh;
+  z-index: 5;
 }
 
 .workHead {
@@ -320,7 +421,7 @@
 .loader {
   height: 100vh;
   width: 100%;
-  background: black;
+  background: rgb(181, 172, 172);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -328,17 +429,21 @@
 }
 
 .loadingText {
-  color: yellow;
+  color: #17252A;
   margin-bottom: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "impact", sans-serif;
   font-size: 50px;
-  background-color: black;
+  background-color: #336c6c;
   padding: 20px 40px;
+  border-radius: 15px;
   display: flex;
+}
+.loadH {
+  color: rgb(234, 233, 233);;
 }
 
 .mainTitle {
-  color: white;
+  color: rgb(234, 233, 233);;
 }
 
 /* FOOTER */
@@ -365,12 +470,12 @@
 }
 
 .personImg {
-  max-height: auto;
-  max-width: 100%;
+  max-height: clamp(30%, 90vh, 100%);
+  max-width: clamp(30%, 30vw, 100%);
   position: absolute;
-  bottom: 0;
-  left: -3%; 
-  z-index: 0;
+  bottom: -5%;
+  right: 20%;
+  z-index: 4;
   transform: rotate(90deg);
 }
 
@@ -415,7 +520,7 @@
   height: 100vh;
   position: absolute;
   width: 15%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: black;
@@ -424,17 +529,17 @@
 }
 
 .showNameText {
-    cursor: default;
-    font-size: clamp(2rem, 10vw, 90px);
+  cursor: default;
+  font-size: clamp(2rem, 10vw, 90px);
 }
 
 .showNameAboutText {
-    cursor: default;
-    font-size: clamp(2rem, 10vw, 100px);
+  cursor: default;
+  font-size: clamp(2rem, 10vw, 100px);
 }
 .showNameLastText {
-    cursor: default;
-    font-size: clamp(2rem, 10vw, 100px);
+  cursor: default;
+  font-size: clamp(2rem, 10vw, 100px);
 }
 
 .smallName {
@@ -451,9 +556,11 @@
   align-items: center;
   font-size: clamp(20px, 7vw, 50px);
   background: black;
-  border-right: 1px solid black;
   cursor: default;
   z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .showNameWork {
@@ -568,69 +675,114 @@
   .aboutTitle {
     font-size: 20px !important;
     margin-right: -15% !important;
-    top: -15%;
+    top: 0;
+    color: #17252A;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     text-align: right;
     font-size: 20px;
   }
-  .infoBox{
+  .infoBox {
     align-items: center;
     text-align: center;
   }
   .infoIcon {
     position: absolute;
-    top: 50%;
+    top: 26%;
     cursor: pointer;
     z-index: 1;
-  
   }
-  
+  .aboutBox {
+    margin-top: 25%;
+  }
+
   .langIcon {
     position: absolute;
-    top: 40%;
-    right: -3%;
+    top: 26%;
+    right: 0;
     cursor: pointer;
     z-index: 1;
   }
-  .personImg {
-    bottom: -10%;
-    left: -10%;
+  .backCircle {
+    width: 100%;
+    height: 60%;
+    bottom: -5%;
+    right: -45%;
   }
-  
+  .backCircle2 {
+    width: 100%;
+    height: 60%;
+    bottom: -5%;
+    right: -55%;
+  }
+  .backCircle3 {
+    width: 100%;
+    height: 60%;
+    bottom: -5%;
+    right: -70%;
+  }
+  .main-desc-text{
+    top: 33%;
+    left: 10%;
+  }
+  .main-name-text {
+    top: 20%;
+  }
+  .main-firstName-border {
+    top:10%;
+  }
+  .main-lastName-border {
+    top: 30%;
+  }
+  .main-right-border {
+    font-size: 20px;
+    left: 0%;
+    bottom: 0;
+    transform: rotate(0deg);
+    z-index: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
+  .personImg {
+    max-height: clamp(50%, 70vh, 100%);
+    max-width: clamp(43%, 40vw, 100%);
+    bottom: -10%;
+    right: 0;
+  }
+
   .personIcon {
     position: absolute;
-    top: 40%;
-    left: -3%;
+    top: 26%;
+    left: 0%;
     cursor: pointer;
     z-index: 1;
   }
   .facebookLogo {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 0;
     cursor: pointer;
-    color: black;
   }
   .twitterLogo {
     position: absolute;
-    top: 25%;
+    top: 20%;
     right: 0;
     cursor: pointer;
-    color: black;
   }
   .githubLogo {
-    top:7%;
+    top: 5%;
   }
   .linkedInLogo {
-    bottom: 7%;
+    bottom: 5%;
   }
   .instagramLogo {
-    left:0;
+    left: 0;
+    bottom: 20%;
   }
   .mailLogo {
-    right:0;
+    right: 0;
+    bottom: 20%;
   }
   .chooseIcon {
     font-family: "Montserrat", sans-serif;
@@ -645,7 +797,6 @@
     height: 10%;
   }
   .palmTrees {
-    
     bottom: -19%;
   }
   .langDiv {
@@ -673,9 +824,9 @@
   align-items: center;
   font-size: 20px;
   padding: 20px;
-  color: yellow;
-  z-index: 1;
-  background: black;
+  border-radius: 0 0 0 15px;
+  z-index: 5;
+  background: #17252A;
   padding-top: 80px;
 }
 .mobileLinkBox {
@@ -688,23 +839,22 @@
 }
 
 .hamMenu {
-  background: yellow;
   color: black;
   cursor: pointer;
   position: absolute;
-  right: 3%;
-  top: 3%;
+  right: -5%;
+  top: 2%;
   z-index: 1;
   width: 100px;
 }
 .hamMenuClose {
-  background: black;
-  color: yellow;
+  
+  color: rgb(234, 233, 233);
   cursor: pointer;
   position: absolute;
-  right: 5%;
-  top: 3%;
-  z-index: 1;
+  right: 1%;
+  top: 2%;
+  z-index: 5;
 }
 
 .links {
@@ -712,12 +862,20 @@
 }
 
 .indLink {
-  background: black;
-  color: yellow;
-  font-family: "Montserrat", sans-serif;
+  font-family: "impact", sans-serif;
   padding: 20px 40px;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgb(234, 233, 233);
+}
+.contactLink {
+  font-family: "impact", sans-serif;
+  padding: 7px 20px;
+  font-weight: 400;
   border-radius: 5px;
+  background:rgb(234, 233, 233);
+  color: #17252A;
+  letter-spacing: 2px;
 }
 
 .mainDesc {
@@ -736,7 +894,6 @@
 .mobileNav {
   display: none;
 }
-
 
 .resume {
   height: 60px;

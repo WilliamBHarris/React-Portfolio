@@ -4,30 +4,14 @@ import { Link } from "react-router-dom";
 
 const NavLinks = () => {
   return (
-    <motion.nav className="mainNav">
+    <motion.nav initial={{y:-300}} animate={{y: 0}} transition={{duration: .5}} className="mainNav">
       <motion.ul
         initial={{ opacity: 0, y: -300 }}
         animate={{ opacity: 1, y: 10 }}
-        transition={{ duration: 1, delay: 0, bounce: 0.03 }}
+        transition={{ duration: .5, delay: 0, bounce: 0.03 }}
         exit={{ opacity: 0 }}
         className="navItems"
       >
-        <Link className="links" to="/">
-          <motion.li
-            className="indLink"
-            whileHover={{
-              scale: 1.3,
-              transition: {
-                duration: 1,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-              },
-            }}
-          >
-            Home
-          </motion.li>
-        </Link>
         <Link className="links" to="/about">
           <motion.li
             className="indLink"
@@ -64,7 +48,7 @@ const NavLinks = () => {
 
         <Link className="links" to="/contact">
           <motion.li
-            className="indLink"
+            className="contactLink"
             whileHover={{
               scale: 1.3,
               transition: {

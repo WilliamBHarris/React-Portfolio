@@ -15,36 +15,8 @@ const variants = {
 const Contact = () => {
     return (
         <motion.div >
-        <div className='contactMain'>
-        <motion.h1
-        className="smallName"
-        variants={variants}
-        initial="hidden"
-        animate="visible"
-        exit={{x: -300, transition:{ duration: 1}}}
-      >
-        CONTACT WILL
-      </motion.h1>
-      <div className='showNameContact'>  <motion.h1
-        className="showNameText"
-        variants={variants}
-        initial="hidden"
-        animate="visible"
-        exit={{x:-300, transition:{ duration: 1}}}
-      >
-        CONTACT
-      </motion.h1></div>
-      <div className='showNameLast'><motion.h1
-        className="showNameText"
-        initial={{ opacity: 1, y: 300 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1}}
-        exit={{y: 300, transition:{ duration: 1}}}
-      >
-        WILL
-      </motion.h1></div>
-      
-      <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>
+        <div  className='contactMain'>      
+      <motion.div style={{border: 'none'}} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5, duration: .5}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Facebook.com" className='facebookLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1, duration: .5}}}><BsFacebook className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Twitter.com" className='twitterLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.5, duration: .5}}}><AiFillTwitterCircle className="socialLogo" /></motion.a>
@@ -53,7 +25,7 @@ const Contact = () => {
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href='www.LinkedIn.com' className='linkedInLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.3, duration: .5}}}><AiFillLinkedin className="socialLogo"  /></motion.a>
         
         <div className="contactTitle">
-          <h1>Lets <span className='connectSpan'>CONNECT.</span></h1>
+          <h1 style={{color: '#17252A'}}>Lets <span style={{color: 'rgb(234, 233, 233)'}} className='connectSpan'>CONNECT.</span></h1>
           
         </div>
       </motion.div>

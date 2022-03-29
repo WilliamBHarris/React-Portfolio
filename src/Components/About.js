@@ -75,38 +75,7 @@ const About = () => {
   return (
     <motion.div>
       <div className="AboutMain">
-        <motion.h1
-          className="smallName"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          exit={{ x: -300, transition: { duration: 1 } }}
-        >
-          ABOUT WILL
-        </motion.h1>
-        <div className="showNameAbout">
-          {" "}
-          <motion.h1
-            className="showNameAboutText"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            exit={{ opacity: 0, x: -300, transition: { duration: 1 } }}
-          >
-            ABOUT
-          </motion.h1>
-        </div>
-        <div className="showNameLast">
-          <motion.h1
-            className="showNameLastText"
-            initial={{ opacity: 1, y: 300 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            exit={{ opacity: 0, y: 300, transition: { duration: 1 } }}
-          >
-            WILL
-          </motion.h1>
-        </div>
+     
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -243,9 +212,10 @@ const About = () => {
                   Current{" "}
                   <span
                     style={{
-                      background: "black",
-                      color: "yellow",
+                      background: "#17252A",
+                      color: "white",
                       padding: 20,
+                      borderRadius: 10
                     }}
                   >
                     FOCUS.
@@ -302,19 +272,6 @@ const About = () => {
             )}
           </AnimatePresence>
         </motion.div>
-        
-        <div className="peaceDiv">
-          <motion.img
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            exit={{ opacity: 0, transition: { duration: 0.3 } }}
-            style={style.active3}
-            className="peaceSign"
-            src={peace}
-            alt="peace sign"
-          />
-        </div>
       </div>
     </motion.div>
   );
