@@ -21,7 +21,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 2)
   }, [])
 
   return (
@@ -48,13 +48,13 @@ function App() {
       <motion.div initial={{opacity: 0.8,y: 10, x: 30}} animate={{x:0, y: 0, opacity: 1}} transition={{duration: 3, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle2'></motion.div>
       <motion.div initial={{opacity: 0.8, y: -30, x: 30}} animate={{x:0, y: 0, opacity: 1}} transition={{duration: 5, repeatType: 'reverse', repeat: Infinity, ease: 'easeInOut'}} className='backCircle3'></motion.div>
       <motion.h1 initial={{opacity: 0, x: 300, rotate: -90}} animate={{opacity: .3, x: 0}} transition={{duration: 2}} className='main-right-border'>Web Developer</motion.h1>
-      <motion.h1 initial={{opacity: 0}}
-        animate={{opacity: .5}}
-        transition={{duration: 1, delay: 1}}
+      <motion.h1 initial={{x: -10, opacity: .2}}
+        animate={{opacity: .5, x: 10}}
+        transition={{duration: 3, delay: 1, repeatType:'reverse', repeat: Infinity}}
         exit={{opacity: 0, transition:{delay: 0}}} className='main-firstName-border'>Will</motion.h1>
-      <motion.h1 initial={{opacity: 0}}
-        animate={{opacity: .5}}
-        transition={{duration: 1, delay: 1}}
+      <motion.h1 initial={{opacity: .2, x: -10}}
+        animate={{opacity: .5, x: 13}}
+        transition={{duration: 5, delay: 1, repeatType:'reverse', repeat: Infinity}}
         exit={{opacity: 0, transition:{delay: 0}}} className='main-lastName-border'>Harris</motion.h1>
     <Nav />
     <AnimatePresence exitBeforeEnter initial={true}>
