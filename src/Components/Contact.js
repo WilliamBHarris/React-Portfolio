@@ -7,16 +7,12 @@ import {AiOutlineMail } from 'react-icons/ai'
 import {AiFillInstagram } from 'react-icons/ai'
 import {AiFillLinkedin } from 'react-icons/ai'
 
-const variants = {
-    hidden: { opacity: 1, x: -300 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0 }, y: 0 },
-  };
 
 const Contact = () => {
     return (
         <motion.div >
         <div  className='contactMain'>      
-      <motion.div style={{border: 'none'}} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} exit={{opacity: 0}} className='aboutBox'>
+      <motion.div initial={{opacity: 1, y: '100vh', scale: 0}} animate={{opacity: 1, scale: 1, y: 0}} transition={{duration: .5}} exit={{opacity: 0, y: '-100vh'}} className='aboutBox'>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5, duration: .5}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Facebook.com" className='facebookLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1, duration: .5}}}><BsFacebook className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Twitter.com" className='twitterLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.5, duration: .5}}}><AiFillTwitterCircle className="socialLogo" /></motion.a>

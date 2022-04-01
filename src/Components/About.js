@@ -12,19 +12,13 @@ import { BsFillInfoSquareFill } from "react-icons/bs";
 import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import Trees from "../assets/Trees.png";
-import peace from "../assets/peace.png";
+
 
 const About = () => {
   const [info, setInfo] = useState(false);
   const [lang, setLang] = useState(false);
   const [person, setPerson] = useState(false);
   const [subtitle, setSubtitle] = useState("");
-
-  const variants = {
-    hidden: { opacity: 1, x: -300 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0 }, y: 0 },
-  };
 
   const handleClickLang = () => {
     setInfo(false);
@@ -77,12 +71,14 @@ const About = () => {
     <motion.div>
       <div className="AboutMain">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0 }}
-          exit={{ opacity: 0, transition: { duration: 0.7, delay: 0 } }}
+          
+          initial={{ opacity: 1, scale: 0, y: '100vh' }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: .5, delay: 0 }}
+          exit={{ opacity: 0, y: '-100vh', transition: { duration: 0.5, delay: 0 } }}
           className="aboutBox"
         >
+ 
           <div className='titleBox'>
           <h1 className="aboutTitle">Hello</h1>
           <h1 className="connectSpan aboutTitle">WORLD!</h1>
@@ -90,7 +86,7 @@ const About = () => {
           <div className='iconBox'>
           <motion.div
             whileHover={{
-              scale: 1.3,
+              scale: 1.2,
               transition: { duration: 0.3, ease: "easeInOut" },
             }}
             initial={{ opacity: 0 }}
@@ -107,7 +103,7 @@ const About = () => {
           </motion.div>
           <motion.div
             whileHover={{
-              scale: 1.3,
+              scale: 1.2,
               transition: { duration: 0.3, ease: "easeInOut" },
             }}
             initial={{ opacity: 0 }}
@@ -125,7 +121,7 @@ const About = () => {
           </motion.div>
           <motion.div
             whileHover={{
-              scale: 1.3,
+              scale: 1.2,
               transition: { duration: 0.3, ease: "easeInOut" },
             }}
             initial={{ opacity: 0 }}
@@ -194,8 +190,7 @@ const About = () => {
                   Working hard to create opportunities.
                 </p>
                 <p className="aboutText">All in pursuit to land a job.</p>
-                <img className="palmTrees" src={Trees} alt="Palm Trees" />
-                <img className="palmTrees2" src={Trees} alt="Palm Trees" />
+           
               </motion.div>
             )}
           </AnimatePresence>

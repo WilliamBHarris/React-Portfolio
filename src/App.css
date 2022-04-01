@@ -10,13 +10,14 @@
   background: rgb(181, 172, 172);
   height: 100vh;
   position: relative;
+  
 }
 
 /* Main Nav */
 .logo {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Permanent Marker",  Inline One, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 8px;
-  font-size: clamp(10px, 10vw, 50px);
+  font-size: clamp(30px, 3vw, 100vmax);
   color: rgb(234, 233, 233);
   position: absolute;
   left: 3%;
@@ -60,55 +61,66 @@
   font-size: clamp(10px, 8vw ,130px);
   color: black;
   transform: rotate(-90deg);
-  bottom: 37%;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  bottom: 40%;
+  font-family: "Permanent Marker",  Inline One, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   right: -18%;
   z-index: 4;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #17252A;
+  -webkit-text-stroke-color: #48a29e;
   opacity: .4;
 }
 .main-firstName-border {
   position: absolute;
-  font-size: clamp(40px, 28vw, 400px);
+  min-height: clamp(100vh, 40vh, 100%);
+  max-height: clamp(50%, 40vh, 100%);
+  min-width: clamp(50%, 100vw, 100vw);
+  max-width: clamp(50%, 80vw, 100%);
+  text-align: left;
+  display: flex;
+  justify-content: left;
   color: rgb(48, 44, 44);
   bottom: 40%;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  left: 3%;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(234, 233, 233);
-  opacity: .5;
+  font-family: "Permanent Marker",  Inline One, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  left: -5%;
+  opacity: .1;
 }
 .main-lastName-border {
   position: absolute;
-  font-size: clamp(40px, 28vw, 400px);
+  min-height: clamp(100vh, 40vh, 100%);
+  max-height: clamp(50%, 40vh, 100%);
+  min-width: clamp(50%, 100vw, 100vw);
+  max-width: clamp(50%, 80vw, 100%);
   color: black;
   
-  bottom: 0;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  left: 3%;
-  z-index: 0;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(234, 233, 233);;
-  opacity: .5;
+  bottom: -30%;
+  font-family: "Permanent Marker",  Inline One, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  left: 0%;
+  z-index: 0; 
+  opacity: .1;
 }
 
 .main-name-text {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Permanent Marker",  Inline One, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: clamp(3.5rem,10vw,150px);
   position: absolute;
   color:#17252A;
   bottom: 60%;
   left: 10%;
+  /* -webkit-text-fill-color: rgb(234, 233, 233);
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: #17252A; */
+  z-index: 10;
+  overflow: visible;
 }
 .main-desc-text {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Permanent Marker",  Inline One, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: clamp(1.4rem, 3.5vw, 50px);
   position: absolute;
   color: #17252A;
+  -webkit-text-fill-color: rgb(234, 233, 233);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #17252A;
   bottom: 43%;
   left: clamp(3vw, 207vw, 10%);
 
@@ -147,12 +159,12 @@ padding-bottom: 10px;
 }
 
 .aboutBox {
-  background: rgb(181, 172, 172, .2);
+  /* background: rgb(181, 172, 172, .2); */
   border-radius: 15px;
   margin: auto;
   width: 88%;
   height: 83vh;
-  margin-top: 8%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,18 +214,25 @@ margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: visible;
-  border: 3px solid black;
-  height: 30%;
+  justify-content: center;
+  background: #17252A;
+  border-radius: 15px;
+  height: 50%;
+  width: 75%;
+  position: absolute;
+  bottom: 5%;
 }
 
 .aboutText {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(16px, 2vw, 30px);
+  -webkit-text-fill-color: rgb(234, 233, 233);
+  -webkit-text-stroke-width: .1px;
+  -webkit-text-stroke-color: #336c6c;
   height: 60px;
   display: flex;
+  font-weight: bold;
   align-items: center;
-  border: 1px solid black;
   text-align: center;
 }
 
@@ -311,8 +330,10 @@ margin-top: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: flex-end;
   height: 100%;
+  margin-top: -40px;
   overflow-x: scroll;
   column-gap: 5px;
+
 }
 
 .chooseIcon {
@@ -329,8 +350,8 @@ margin-top: 50px;
 }
 
 .imgDiv {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
@@ -338,7 +359,6 @@ margin-top: 50px;
 }
 
 .contactMain {
-  background: rgb(181, 172, 172);
   height: 100vh;
 }
 
@@ -408,7 +428,8 @@ margin-top: 50px;
 
 .socialLogo {
   font-size: clamp(60px, 6vw, 200px);
-  color: #17252A;
+  color:  #17252A;
+
 }
 
 .iconBox {
@@ -446,7 +467,7 @@ margin-top: 50px;
 .loader {
   height: 100vh;
   width: 100%;
-  background: rgb(181, 172, 172);
+  background: #336c6c;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,7 +477,7 @@ margin-top: 50px;
 .loadingText {
   color: #17252A;
   margin-bottom: 20px;
-  font-family: "impact", sans-serif;
+  font-family: ""Permanent Marker",  Inline One", sans-serif;
   font-size: 50px;
   background-color: #336c6c;
   padding: 20px 40px;
@@ -744,10 +765,10 @@ margin-top: 50px;
     left: -5%;
   }
   .main-desc-text{
-    top: 33%;
+    top: 30%;
     left: 10%;
     margin-top: 15px;
-    font-size: clamp(1.3rem, 5vw, 100px);
+    font-size: clamp(1.5rem, 5vw, 100px);
   }
   .contactTitle {
     
@@ -757,10 +778,10 @@ margin-top: 50px;
     top: 17%;
   }
   .main-firstName-border {
-    top:10%;
+    top:-27%;
   }
   .main-lastName-border {
-    top: 30%;
+    top: -5%;
   }
   .main-right-border {
     font-size: 20px;
@@ -817,10 +838,12 @@ margin-top: 50px;
   }
   .infoBox {
     position: absolute;
-    
+    width: 100%;
+    bottom: 0;
   }
   .aboutText {
-    height: 10%;
+    
+    height: 30%;
   }
   .palmTrees {
     bottom: -19%;
@@ -888,14 +911,14 @@ margin-top: 50px;
 }
 
 .indLink {
-  font-family: "impact", sans-serif;
+  font-family: ""Permanent Marker",  Inline One", sans-serif;
   padding: 20px 40px;
   font-weight: 400;
   letter-spacing: 2px;
   color: rgb(234, 233, 233);
 }
 .contactLink {
-  font-family: "impact", sans-serif;
+  font-family: ""Permanent Marker",  Inline One", sans-serif;
   padding: 7px 20px;
   font-weight: 400;
   border-radius: 5px;
@@ -935,4 +958,26 @@ margin-top: 50px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 7vh;
+  background: #17252A;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  color: rgb(234, 233, 233);
+  font-family: 'Montserrat';
+  justify-content: flex-end;
+  padding-right: 3%;
+}
+
+.footer h3 {
+  border: .5px solid rgb(234, 233, 233);
+  padding: 5px 10px;
+  background: #336c6c;
+  border-radius: 10px;
 }
