@@ -21,13 +21,13 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2);
   }, []);
 
   return (
     <motion.main
       initial={{ opacity: 1 }}
-      animate={{ opacity: 1, background: "#336c6c" }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="mainBox"
     >
@@ -78,10 +78,10 @@ function App() {
 
 
           <motion.div
-            initial={{ opacity: 0.8, y: 20, x: 30 }}
-            animate={{ opacity: 1, x: 0, y: -10 }}
+            initial={{ opacity: 0.8, y: 20, x: 303 }}
+            animate={{ opacity: 1, x: 370, y: -10 }}
             transition={{
-              duration: 7,
+              duration: 4,
               repeatType: "reverse",
               repeat: Infinity,
               ease: "easeInOut",
@@ -89,10 +89,10 @@ function App() {
             className="backCircle"
           ></motion.div>
           <motion.div
-            initial={{ opacity: 0.8, y: 10, x: 30 }}
-            animate={{ x: 0, y: 0, opacity: 1 }}
+            initial={{ opacity: 0.8, y: 10, x: 303 }}
+            animate={{ x: 360, y: 0, opacity: 1 }}
             transition={{
-              duration: 9,
+              duration: 3,
               repeatType: "reverse",
               repeat: Infinity,
               ease: "easeInOut",
@@ -100,24 +100,24 @@ function App() {
             className="backCircle2"
           ></motion.div>
           <motion.div
-            initial={{ opacity: 0.8, y: -30, x: 30 }}
-            animate={{ x: 0, y: 0, opacity: 1 }}
+            initial={{ opacity: 0.8, y: -30, x: 303 }}
+            animate={{ x: 380, y: 0, opacity: 1 }}
             transition={{
-              duration: 11,
+              duration: 2,
               repeatType: "reverse",
               repeat: Infinity,
               ease: "easeInOut",
             }}
             className="backCircle3"
           ></motion.div>
-          <motion.h1
+          {/* <motion.h1
             initial={{ opacity: 0, x: 300, rotate: -90 }}
             animate={{ opacity: 0.3, x: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
             className="main-right-border"
           >
             Web Developer
-          </motion.h1>
+          </motion.h1> */}
 
           <svg className="main-firstName-border" width="701" height="317" viewBox="0 0 701 317" fill="none" xmlns="http://www.w3.org/2000/svg">
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M325.781 0.789062L289.258 317H186.523C177.148 268.432 168.88 213.224 161.719 151.375C158.464 177.807 150.846 233.016 138.867 317H36.7188L0 0.789062H79.8828L88.2812 111.141L96.875 217.586C99.8698 162.508 107.422 90.2422 119.531 0.789062H205.078C206.25 10.0339 209.245 44.7995 214.062 105.086L223.047 225.203C227.604 148.771 235.221 73.9661 245.898 0.789062H325.781Z" fill="none" stroke="white" strokeWidth="5"/>

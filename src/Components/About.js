@@ -110,7 +110,7 @@ const About = () => {
             animate={{ opacity: 1, transition: { delay: 0.6, duration: 0.5 } }}
             className="langIcon"
           >
-            {" "}
+            
             <MdOutlineDeveloperMode
               className="socialLogo"
               onMouseEnter={handleRover2}
@@ -205,7 +205,7 @@ const About = () => {
                 className="langDiv"
               >
                 <h1 className="langTitle">
-                  Current{" "}
+                  Current
                   <span
                     style={{
                       background: "#17252A",
