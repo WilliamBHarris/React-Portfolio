@@ -7,10 +7,26 @@
 
 /* Main Show */
 .mainBox {
-  background: rgba(68, 45, 143, 0.907);
+  background: rgb(255, 19, 19);
   height: 100vh;
   position: relative;
   
+}
+
+.group6 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: .2;
+  z-index: 1;
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  opacity: .5;
 }
 
 /* Main Nav */
@@ -23,7 +39,7 @@
   z-index: 10;
 }
 
-.backCircle {
+/* .backCircle {
   border-radius: 35%;
   background-color: rgb(234, 233, 233);
   height: 110%;
@@ -52,7 +68,7 @@
   bottom: -10%;
   right: -25%;
   z-index: 3;
-}
+} */
 
 .main-right-border {
   position: absolute;
@@ -81,7 +97,7 @@
   bottom: 40%;
   font-family: "Montserrat",  Inline One, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   left: -5%;
-  opacity: .06;
+  opacity: .15;
 }
 .main-lastName-border {
   position: absolute;
@@ -95,7 +111,7 @@
   font-family: "Montserrat",  Inline One, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   left: 0%;
   z-index: 0; 
-  opacity: .06;
+  opacity: .15;
 }
 
 .main-name-text {
@@ -189,13 +205,15 @@ padding-bottom: 10px;
   height: 40%;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
 }
 .projectBox1 button {
  border-radius: 15px;
- width: 130px;
- height: 60px !important;
+ font-size: 16px;
+ width: 150px;
+ font-weight: 600;
+ height: 80px !important;
  border: none;
  background: #17252A;
  color: rgb(234, 233, 233);
@@ -226,16 +244,15 @@ padding-bottom: 10px;
 
 .titleBox {
   display: flex;
-  top: 0;
   position: absolute;
   justify-content: center;
 }
 
 .aboutTitle {
-margin-top: 50px;
+
   padding-left: 0;
   font-weight: bold;
-  align-self: flex-start;
+  align-self: center;
   text-align: center;
   justify-content: center;
   display: flex;
@@ -339,6 +356,7 @@ margin-top: 50px;
   top: 25%;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(20px, 4vw, 40px);
+  color: #17252A;
 }
 
 .langDiv {
@@ -381,7 +399,7 @@ margin-top: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: flex-end;
   height: 100%;
-  margin-top: -70px;
+  margin-top: -30px;
   overflow-x: scroll;
   column-gap: 5px;
 
@@ -390,13 +408,14 @@ margin-top: 50px;
 .chooseIcon {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(16px, 4vw, 22px);
+  color: #17252A;
 }
 
 .chooseBox {
   position: absolute;
   text-align: center;
   
-  bottom: 0;
+  bottom: -50%;
   width: 100%;
 }
 
@@ -417,7 +436,7 @@ margin-top: 50px;
   color:rgb(234, 233, 233);
   border-radius: 10px;
   padding: 0px 10px;
-  background-color: #336c6c;
+  background-color: #17252A;
   text-align: center;
   border: 1px solid #17252A;
 }
@@ -486,7 +505,6 @@ margin-top: 50px;
 .iconBox {
   display: flex;
   width: 100%;
-  min-height: 35%;
   justify-content: space-evenly;
   align-self: flex-start;
   margin-top: 190px;
@@ -774,7 +792,7 @@ margin-top: 50px;
     flex-direction: column;
     justify-content: flex-start;
     text-align: right;
-    font-size: clamp(.5rem, 9vw, 50px);
+    font-size: clamp(26px, 4vw, 50px);
     margin-top: 70px;
   }
   /* .infoIcon {
@@ -1027,8 +1045,9 @@ margin-top: 50px;
 }
 
 .footer h3 {
-  border: .5px solid rgb(234, 233, 233);
-  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 15px;
   background: #336c6c;
-  border-radius: 10px;
+  border-radius: 5px;
 }

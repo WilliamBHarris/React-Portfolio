@@ -51,13 +51,13 @@ const About = () => {
 
   const style = {
     active: {
-      color: info ? "rgb(0, 0, 0, .3)" : "black",
+      color: info ? "rgb(0, 0, 0, .3)" : "#17252A",
     },
     active1: {
-      color: lang ? "rgb(0, 0, 0, .3)" : "black",
+      color: lang ? "rgb(0, 0, 0, .3)" : "#17252A",
     },
     active2: {
-      color: person ? "rgb(0, 0, 0, .3)" : "black",
+      color: person ? "rgb(0, 0, 0, .3)" : "#17252A",
     },
     active3: {
       display: person || lang || info ? "none" : "block",
@@ -75,7 +75,7 @@ const About = () => {
           initial={{ opacity: 1, scale: 0, y: '100vh' }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: .5, delay: 0 }}
-          exit={{ opacity: 0, y: '-100vh', transition: { duration: 0.5, delay: 0 } }}
+          exit={{scale: 0, opacity: 0, y: '-100vh', transition: { duration: 0.5, delay: 0 } }}
           className="aboutBox"
         >
  
@@ -209,7 +209,7 @@ const About = () => {
                   <span
                     style={{
                       background: "#17252A",
-                      color: "white",
+                      color: "rgb(234, 233, 233)",
                       padding: 20,
                       borderRadius: 10,
                     }}

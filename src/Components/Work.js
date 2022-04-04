@@ -19,69 +19,75 @@ const Work = () => {
     <motion.div>
       <div className="workMain">
         <motion.div
-          initial={{ opacity: 1, y: "100vh" }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{scale: 0, opacity: 0, y: "100vh" }}
+          animate={{scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          exit={{ opacity: 0, y: "-100vh" }}
+          exit={{ scale: 0,opacity: 0, y: "-100vh" }}
           className="workBox"
         >
           <div className="projectBox1">
-          <button onMouseEnter={()=> setGraffi(true)} style={{ visibility: graffi ? 'hidden' : 'visible', height: '10%', position: 'absolute', top: '50%', left: '25%', transform: 'translate(-50%,-50%)'}}>Graffi</button>
-          <div style={{visibility: graffi ? 'visible' : 'hidden'}} onMouseEnter={() => setGraffi(true)} onMouseLeave={() => setGraffi(false)} class="proCard">
+          <button onClick={()=> setGraffi(!graffi)} style={{ visibility: graffi ? 'visible' : 'visible', height: '10%', position: 'absolute', top: '45%', left: '3%', transform: 'translate(50%,-50%)'}}>Graffi</button>
+          
+              <button onClick={()=> setChore(!chore)} style={{ visibility: chore ? 'visible' : 'visible', height: '10%', position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%,-50%)'}}>Chore Me</button>
+            
+              <button onClick={()=> setPort(!port)} style={{ visibility: port ? 'visible' : 'visible', height: '10%', position: 'absolute', top: '45%', left: '90%', transform: 'translate(-50%,-50%)'}}>Portfolio v.1</button>
+            
+          </div>
+          {graffi ?  <div style={{visibility: graffi ? 'visible' : 'hidden', height: '50%', width: '60%', position: 'absolute', bottom: '0', border: '1px solid black', transform: 'translate(0%,-50%)'}}  class="proCard">
             
             <motion.img  whileHover={{scale: 1.2, transition: {duration: .3}}} alt='project' className='portfolioImage' src={graffiProject} />
               <h3>Project 1</h3>
               <p>Short description</p>
               
               <p>onMouseEnter drop down for github source code, and live</p>
-              </div>
-              <button onMouseEnter={()=> setChore(true)} style={{ visibility: chore ? 'hidden' : 'visible', height: '10%', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'}}>choreMe</button>
-            <div style={{visibility: chore ? 'visible' : 'hidden'}} onMouseEnter={() => setChore(true)} onMouseLeave={() => setChore(false)} class="proCard">
+              </div> : <h1 className="contactTitle" style={{ color: "#17252A" }}>
+            More to
+            <span
+              style={{ color: "rgb(234, 233, 233)" }}
+              className="connectSpan"
+            >
+              COME...
+            </span>
+          </h1>}
+          {chore ?  <div style={{visibility: chore ? 'visible' : 'hidden', height: '50%', width: '60%', position: 'absolute', bottom: '0', border: '1px solid black', transform: 'translate(0%,-50%)'}} class="proCard">
             
             <motion.img  whileHover={{scale: 1.2, transition: {duration: .3}}} alt='project' className='portfolioImage' src={choreMeProject} />
               <h3>Project 2</h3>
               <p>Short description</p>
               <p>onMouseEnter drop down for github source code, and live</p>
-              </div>
-              <button onMouseEnter={()=> setPort(true)} style={{ visibility: port ? 'hidden' : 'visible', height: '10%', position: 'absolute', top: '50%', left: '75%', transform: 'translate(-50%,-50%)'}}>Portfolio v.1</button>
-            <div style={{visibility: port ? 'visible' : 'hidden'}} onMouseEnter={() => setPort(true)} onMouseLeave={() => setPort(false)} class="proCard">
+              </div> : null}
+          {port ?  <div style={{visibility: port ? 'visible' : 'hidden', height: '50%', width: '60%', position: 'absolute', bottom: '0', border: '1px solid black', transform: 'translate(0%,-50%)'}}  class="proCard">
               <h3>Project 3</h3>
               <p>Short description</p>
               <motion.img whileHover={{scale: 1.2, transition: {duration: .3}}} alt='project' className='portfolioImage' src={PortfolioImage} />
               <p>onMouseEnter drop down for github source code, and live</p>
-              </div>
-          </div>
-          <h1 className="contactTitle" style={{ color: "#17252A" }}>
-            Keep
-            <span
-              style={{ color: "rgb(234, 233, 233)" }}
-              className="connectSpan"
-            >
-              TRYING.
-            </span>
-          </h1>
-          <div className="projectBox1">
-          <button onMouseEnter={()=> setWork(true)} style={{ visibility: work ? 'hidden' : 'visible', height: '10%', position: 'absolute', top: '50%', left: '25%', transform: 'translate(-50%,-50%)'}}>Workout Log</button>
-            <div style={{visibility: work ? 'visible' : 'hidden'}} onMouseEnter={() => setWork(true)} onMouseLeave={() => setWork(false)} class="proCard">
+              </div> : null}
+          {work ? <div style={{visibility: work ? 'visible' : 'hidden', height: '50%', width: '60%', position: 'absolute', bottom: '0', border: '1px solid black', transform: 'translate(0%,-50%)'}} class="proCard">
               <h3>Project 1</h3>
               <p>Short description</p>
               <motion.img whileHover={{scale: 1.2, transition: {duration: .3}}} alt='project' className='portfolioImage' src={workoutPro} />
               <p>onMouseEnter drop down for github source code, and live</p>
-              </div>
-              <button onMouseEnter={()=> setGif(true)} style={{ visibility: gif ? 'hidden' : 'visible', height: '10%', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'}}>Gif Finder</button>
-            <div style={{visibility: gif ? 'visible' : 'hidden'}} onMouseEnter={() => setGif(true)} onMouseLeave={() => setGif(false)} class="proCard">
+              </div> : null}
+
+          {gif ? <div style={{visibility: gif ? 'visible' : 'hidden', height: '50%', width: '60%', position: 'absolute', bottom: '0', border: '1px solid black', transform: 'translate(0%,-50%)'}} class="proCard">
               <h3>Project 2</h3>
               <p>Short description</p>
               <motion.img whileHover={{scale: 1.2, transition: {duration: .3}}} alt='project' className='portfolioImage' src={gifPro} />
               <p>onMouseEnter drop down for github source code, and live</p>
-              </div>
-              <button onMouseEnter={()=> setPoke(true)} style={{ visibility: poke ? 'hidden' : 'visible', height: '10%', position: 'absolute', top: '50%', left: '75%', transform: 'translate(-50%,-50%)'}}>Pokemon Catch</button>
-            <div style={{visibility: poke ? 'visible' : 'hidden'}} onMouseEnter={() => setPoke(true)} onMouseLeave={() => setPoke(false)} class="proCard">
+              </div> : null}
+              {poke ? <div style={{visibility: poke ? 'visible' : 'hidden', height: '50%', width: '60%', position: 'absolute', bottom: '0', border: '1px solid black', transform: 'translate(0%,-50%)'}}  class="proCard">
               <h3>Project 3</h3>
               <p>Short description</p>
               <motion.img whileHover={{scale: 1.2, transition: {duration: .3}}} alt='project' className='portfolioImage' src={pokePro} />
               <p>onMouseEnter drop down for github source code, and live</p>
-              </div>
+              </div> : null}
+          <div className="projectBox1">
+          <button onClick={()=> setWork(!work)} style={{ visibility: work ? 'visible' : 'visible', height: '10%', position: 'absolute', top: '55%', left: '12%', transform: 'translate(-50%,-50%)'}}>Workout Log</button>
+            
+              <button onClick={()=> setGif(!gif)} style={{ visibility: gif ? 'visible' : 'visible', height: '10%', position: 'absolute', top: '55%', left: '50%', transform: 'translate(-50%,-50%)'}}>Gif Finder</button>
+            
+              <button onClick={()=> setPoke(!poke)} style={{ visibility: poke ? 'visible' : 'visible', height: '10%', position: 'absolute', top: '55%', left: '91%', transform: 'translate(-50%,-50%)'}}>Poke' Catch</button>
+            
           </div>
         </motion.div>
       </div>

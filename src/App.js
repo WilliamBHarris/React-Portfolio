@@ -9,6 +9,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Components/Footer";
+import Group6 from './assets/Group6.png'
+import Bg from './assets/bg.png'
 
 import { motion } from "framer-motion";
 
@@ -119,7 +121,7 @@ function App() {
             Web Developer
           </motion.h1> */}
 
-          <svg className="main-firstName-border" width="701" height="317" viewBox="0 0 701 317" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* <svg className="main-firstName-border" width="701" height="317" viewBox="0 0 701 317" fill="none" xmlns="http://www.w3.org/2000/svg">
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M325.781 0.789062L289.258 317H186.523C177.148 268.432 168.88 213.224 161.719 151.375C158.464 177.807 150.846 233.016 138.867 317H36.7188L0 0.789062H79.8828L88.2812 111.141L96.875 217.586C99.8698 162.508 107.422 90.2422 119.531 0.789062H205.078C206.25 10.0339 209.245 44.7995 214.062 105.086L223.047 225.203C227.604 148.771 235.221 73.9661 245.898 0.789062H325.781Z" fill="none" stroke="white" strokeWidth="5"/>
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M441.094 0.789062V42H359.844V0.789062H441.094ZM441.094 57.8203V317H359.844V57.8203H441.094Z" fill="none" stroke="white" strokeWidth="5"/>
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M570.859 0.789062V317H489.609V0.789062H570.859Z" fill="none" stroke="white" strokeWidth="5"/>
@@ -143,7 +145,10 @@ function App() {
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M709.156 62.8203L706.031 96.8047C717.49 72.4557 734.091 59.5651 755.836 58.1328V149.344C741.383 149.344 730.771 151.297 724 155.203C717.229 159.109 713.062 164.578 711.5 171.609C709.938 178.51 709.156 194.526 709.156 219.656V322H630.25V62.8203H709.156Z" stroke="white" strokeWidth="10" mask="url(#path-1-outside-1_2_19)"/>
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M874.859 5.78906V47H793.609V5.78906H874.859ZM874.859 62.8203V322H793.609V62.8203H874.859Z" stroke="white" strokeWidth="10" mask="url(#path-1-outside-1_2_19)"/>
 <motion.path initial={{pathLength: 0}} animate={{pathLength: 1}}  transition={{duration: 4}} d="M1084.51 145.633H1014.59V131.57C1014.59 119.591 1013.87 112.039 1012.44 108.914C1011.14 105.659 1007.75 104.031 1002.28 104.031C997.854 104.031 994.534 105.529 992.32 108.523C990.107 111.388 989 115.75 989 121.609C989 129.552 989.521 135.411 990.562 139.188C991.734 142.833 995.055 146.87 1000.52 151.297C1006.12 155.724 1017.52 162.169 1034.7 170.633C1057.62 181.831 1072.66 192.378 1079.82 202.273C1086.98 212.169 1090.56 226.557 1090.56 245.438C1090.56 266.531 1087.83 282.482 1082.36 293.289C1076.89 303.966 1067.71 312.234 1054.82 318.094C1042.06 323.823 1026.63 326.688 1008.53 326.688C988.479 326.688 971.292 323.562 956.969 317.312C942.776 311.062 933.01 302.599 927.672 291.922C922.333 281.245 919.664 265.099 919.664 243.484V230.984H989.586V247.391C989.586 261.323 990.432 270.372 992.125 274.539C993.948 278.706 997.464 280.789 1002.67 280.789C1008.27 280.789 1012.18 279.422 1014.39 276.688C1016.6 273.823 1017.71 267.898 1017.71 258.914C1017.71 246.544 1016.28 238.797 1013.41 235.672C1010.42 232.547 995.12 223.302 967.516 207.938C944.339 194.917 930.211 183.133 925.133 172.586C920.055 161.909 917.516 149.279 917.516 134.695C917.516 113.992 920.25 98.7578 925.719 88.9922C931.188 79.0964 940.432 71.4792 953.453 66.1406C966.604 60.8021 981.839 58.1328 999.156 58.1328C1016.34 58.1328 1030.93 60.3464 1042.91 64.7734C1055.02 69.0703 1064.26 74.7995 1070.64 81.9609C1077.15 89.1224 1081.06 95.763 1082.36 101.883C1083.79 108.003 1084.51 117.573 1084.51 130.594V145.633Z" stroke="white" strokeWidth="10" mask="url(#path-1-outside-1_2_19)"/>
-</svg>
+</svg> */}
+
+<img src={Group6} alt='background' className='group6' />
+<img src={Bg} alt='background' className='bg' />
 
           <Nav />
           <Footer />

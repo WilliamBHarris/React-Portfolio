@@ -12,7 +12,7 @@ const Contact = () => {
     return (
         <motion.div >
         <div  className='contactMain'>      
-      <motion.div initial={{opacity: 1, y: '100vh', scale: 0}} animate={{opacity: 1, scale: 1, y: 0}} transition={{duration: .5}} exit={{opacity: 0, y: '-100vh'}} className='aboutBox'>
+      <motion.div initial={{opacity: 1, y: '100vh', scale: 0}} animate={{opacity: 1, scale: 1, y: 0}} transition={{duration: .5}} exit={{scale:0 ,opacity: 0, y: '-100vh'}} className='aboutBox'>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5, duration: .5}}} target="_blank" href="www.gitHub.com" className='githubLogo'><FaGithub className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Facebook.com" className='facebookLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1, duration: .5}}}><BsFacebook className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="www.Twitter.com" className='twitterLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.5, duration: .5}}}><AiFillTwitterCircle className="socialLogo" /></motion.a>
