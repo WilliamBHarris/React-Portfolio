@@ -79,10 +79,10 @@ const About = () => {
           className="aboutBox"
         >
  
-          <div className='titleBox'>
-          <h1 className="aboutTitle">Hello</h1>
-          <h1 className="connectSpan aboutTitle">WORLD!</h1>
-          </div>
+          <AnimatePresence exitBeforeEnter >{lang === true || info === true  ? null : <div className='titleBox'>
+          <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: .5}} exit={{opacity: 0}} className="aboutTitle">Hello</motion.h1>
+          <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: .5}} exit={{opacity: 0}} className="connectSpan aboutTitle">WORLD!</motion.h1>
+          </div>}</AnimatePresence>
           <div className='iconBox'>
           <motion.div
             whileHover={{
@@ -137,36 +137,21 @@ const About = () => {
             />
           </motion.div>
           <div className='chooseBox'>
-            <AnimatePresence exitBeforeEnter>
-              {!info && !lang && !person ? (
-                <>
-                  {!subtitle ? (
-                    <motion.p
+          <AnimatePresence exitBeforeEnter >{lang === true || info === true || person === true  ? null : <div>
+          <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.5 }}
                       className="chooseIcon"
                       exit={{ opacity: 0, transition: { duration: 0.3 } }}
-                      style={{
-                        visibility: !subtitle ? "visible" : "hidden",
-                      }}
                     >
-                      <AiOutlineArrowUp
-                        style={{ marginRight: "10px", paddingTop: "5px" }}
-                      />
+         
                       Choose an icon
-                      <AiOutlineArrowUp
-                        style={{ marginLeft: "10px", paddingTop: "5px" }}
-                      />
+                
                     </motion.p>
-                  ) : (
-                    <p className="subtitleText" style={style.active5}>
-                      {subtitle}
-                    </p>
-                  )}
-                </>
-              ) : null}
-            </AnimatePresence>
+          </div>}</AnimatePresence>
+                    
+        
           </div>
           </div>
           
@@ -189,7 +174,7 @@ const About = () => {
                 <p className="aboutText">
                   Working hard to create opportunities.
                 </p>
-                <p className="aboutText">All in pursuit to land a job.</p>
+                <p style={{textDecoration: 'underline'}} className="aboutText">All in pursuit to land a job.</p>
            
               </motion.div>
             )}
