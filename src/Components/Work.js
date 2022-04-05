@@ -292,7 +292,7 @@ const Work = () => {
               >
                 <div className='workBg'>
                 <h3>Poke Catch</h3>
-                <p>Pokemon fetcher, using Pokemon API</p>
+                <p>Poke game, using Pokemon API</p>
                 </div>
                 <motion.img
                   whileHover={{ scale: 1, transition: { duration: 0.3 } }}
