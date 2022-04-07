@@ -11,13 +11,12 @@ import { SiTypescript } from "react-icons/si";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineDeveloperMode } from "react-icons/md";
-import { AiOutlineArrowUp } from "react-icons/ai";
 
 
 const About = () => {
   const [info, setInfo] = useState(false);
   const [lang, setLang] = useState(false);
-  const [person, setPerson] = useState(false);
+  const [person, setPerson] = useState(true);
   const [subtitle, setSubtitle] = useState("");
 
   const handleClickLang = () => {
@@ -69,7 +68,7 @@ const About = () => {
 
   return (
     <motion.div>
-      <div className="AboutMain">
+      <div className="AboutMain" id='about'>
         <motion.div
           
           initial={{ opacity: 1, scale: 0, y: '100vh' }}
@@ -137,7 +136,19 @@ const About = () => {
             />
           </motion.div>
           <div className='chooseBox'>
-          <AnimatePresence exitBeforeEnter >{lang === true || info === true || person === true  ? null : <div>
+          <AnimatePresence exitBeforeEnter >{lang === false || info === false || person === false  ? <div>
+          <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className="chooseIcon"
+                      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+                    >
+         
+                      Choose an icon
+                
+                    </motion.p>
+          </div> : <div>
           <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -216,7 +227,7 @@ const About = () => {
             )}
           </AnimatePresence>
           <AnimatePresence exitBeforeEnter>
-            {person && (
+            {person  && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -224,7 +235,7 @@ const About = () => {
                 exit={{ opacity: 0, transition: { duration: 0.3 } }}
                 className="langDiv"
               >
-                <div className="aboutImages" scroll>
+                <div className="aboutImages" >
                   <div className="imgDiv">
                     <img
                       alt="this is me"

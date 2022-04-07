@@ -2,13 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden; 
+  scroll-behavior: smooth;
+
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+    background: rgb(114, 114, 114);
 }
 
 /* Main Show */
 .mainBox {
-  background: rgb(194, 193, 193);
-  height: 100vh;
+  background: rgb(114, 114, 114);
+  height: 93vh;
   position: relative;
   
 }
@@ -17,8 +25,16 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  opacity: .2;
+  opacity: .1;
   z-index: 0;
+}
+.group7 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: .1;
+  z-index: 0;
+  transform: scaleX(-1);
 }
 
 .bg {
@@ -38,37 +54,6 @@
   top: 1%;
   z-index: 10;
 }
-
-/* .backCircle {
-  border-radius: 35%;
-  background-color: rgb(234, 233, 233);
-  height: 110%;
-  width: 50%;
-  position: absolute;
-  bottom: -10%;
-  right: -15%;
-  z-index: 1;
-}
-.backCircle2 {
-  border-radius: 40%;
-  background-color: #48a29e;
-  height: 110%;
-  width: 50%;
-  position: absolute;
-  bottom: -10%;
-  right: -20%;
-  z-index: 2;
-}
-.backCircle3 {
-  border-radius: 40%;
-  background-color: #336c6c;
-  height: 110%;
-  width: 50%;
-  position: absolute;
-  bottom: -10%;
-  right: -25%;
-  z-index: 3;
-} */
 
 .main-right-border {
   position: absolute;
@@ -142,22 +127,21 @@
 
 
 .mainNav {
-  background: #17252A;
-  width: 50%;
-  border-radius: 0 0 0 15px;
+  background: #ff0000;
+  width: 100%;
   position: absolute;
   right: 0;
-padding-bottom: 10px;
+  padding-bottom: 10px;
   top: 0;
   margin: auto;
-  z-index: 10;
+  z-index: 9;
 }
 
 .navItems {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 100%;
-
+  padding-right: 30px;
   align-items: center;
   list-style: none;
   font-size: 20px;
@@ -168,8 +152,13 @@ padding-bottom: 10px;
 /* Main Nav End */
 
 .AboutMain {
-  height: 100vh;
-  position: relative;
+  height: 93vh;
+  background:rgb(234, 233, 233)
+}
+.showMain {
+  height: 93vh;
+  background:rgb(109, 109, 109);
+  overflow: hidden;
 }
 
 .aboutBox {
@@ -198,6 +187,7 @@ padding-bottom: 10px;
   align-items: center;
   position: relative;
   z-index: 4;
+  overflow: hidden;
 }
 
 .projectBox1 {
@@ -226,7 +216,6 @@ padding-bottom: 10px;
 .proCard {
   min-height: 50%;
   min-width: clamp(600px, 60vw, 100%);
-  /* min-width: 10%; */
   font-family: 'Montserrat';
   border-radius: 5px;
   color: white;
@@ -238,7 +227,6 @@ padding-bottom: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%,-50%);
 }
 
@@ -350,53 +338,6 @@ padding-bottom: 10px;
   text-align: center;
 }
 
-/* .aboutSpan {
-  font-size: clamp(16px, 2vw, 30px);
-  padding: 20px;
-  background-color: black;
-  color: yellow;
-  margin-left: 5px;
-  font-weight: bold;
-} */
-
-.infoIcon {
-  /* position: absolute;
-  top: 25%;
-  cursor: pointer; */
-  z-index: 1;
-}
-
-.langIcon {
-  /* position: absolute;
-  top: 25%;
-  right: 25%;
-  cursor: pointer; */
-  z-index: 1;
-}
-
-.personIcon {
-  /* position: absolute;
-  top: 25%;
-  left: 25%;
-  cursor: pointer; */
-  z-index: 1;
-}
-
-.peaceSign {
-  max-height: 30vh;
-  max-width: 40%;
-}
-
-.peaceDiv {
-  position: absolute;
-  right: 0;
-  bottom: -3%;
-  display: flex;
-  justify-content: center;
-  width: 85%;
-  float: right;
-}
-
 .langTitle {
   position: absolute;
   top: 25%;
@@ -430,13 +371,6 @@ padding-bottom: 10px;
   position: absolute;
 }
 
-.subtitleText {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-size: clamp(16px, 4vw, 22px);
-  letter-spacing: 0px;
-  color: #17252A;
-}
 
 .aboutImages {
   width: 100%;
@@ -478,7 +412,9 @@ padding-bottom: 10px;
 }
 
 .contactMain {
-  height: 100vh;
+  height: 90vh;
+  background: rgb(255, 0, 0);
+  overflow: hidden;
 }
 
 .connectSpan {
@@ -497,19 +433,6 @@ padding-bottom: 10px;
   font-size: clamp(26px, 4vw, 50px);
   overflow: visible;
 }
-
-/* @media only screen and (max-width: 637px) {
-  .contactTitle {
-    display: flex;
-    text-align: right;
-    position: absolute;
-    top: 35%;
-  }
-  .contactTitle span {
-    background: #17252A;
-    padding: 0 10px;
-  }
-} */
 
 .githubLogo {
   position: absolute;
@@ -578,8 +501,8 @@ padding-bottom: 10px;
   z-index: 5;
 }
 
-.workHead {
-  color: black;
+.workMain {
+  height: 93vh;
 }
 
 .loader {
@@ -610,225 +533,19 @@ padding-bottom: 10px;
   color: rgb(234, 233, 233);;
 }
 
-/* FOOTER */
-
-.mainFooter {
-  color: white;
-  background: black;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  height: 60px;
-}
-
-.footerItems {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  column-gap: 100px;
-  margin-right: 100px;
-  height: 100%;
-  list-style: none;
-  font-size: 20px;
-}
-
 .personImg {
-  max-height: clamp(30%, 90vh, 100%);
+  max-height: clamp(30%, 85vh, 100%);
   max-width: clamp(30%, 30vw, 100%);
   position: absolute;
-  bottom: -5%;
+  bottom: 0;
   right: 20%;
   z-index: 4;
   transform: rotate(90deg);
 }
 
-.middleNameDiv {
-  color: yellow;
-  height: 7vh;
-  position: absolute;
-  width: 10%;
-  right: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 300px;
-  background: black;
-}
-
-.mainAlign {
-  height: 86.5vh;
-  width: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-  text-align: center;
-}
-
-.innerText {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-}
-
-.showName {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  height: 100vh;
-  position: absolute;
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  letter-spacing: 20px;
-  z-index: 1;
-}
-
-.showNameText {
-  cursor: default;
-  font-size: clamp(2rem, 10vw, 90px);
-}
-
-.showNameAboutText {
-  cursor: default;
-  font-size: clamp(2rem, 10vw, 100px);
-}
-.showNameLastText {
-  cursor: default;
-  font-size: clamp(2rem, 10vw, 100px);
-}
-
-.smallName {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  height: 100vh;
-  position: absolute;
-  min-width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(20px, 7vw, 50px);
-  background: black;
-  cursor: default;
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.showNameWork {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  height: 100vh;
-  position: absolute;
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(2rem, 10vw, 100px);
-  background: black;
-  border-right: 1px solid black;
-  cursor: default;
-  z-index: 1;
-}
-
-.showNameAbout {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  height: 100vh;
-  position: absolute;
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(2rem, 10vw, 100px);
-  background: black;
-  border-right: 1px solid black;
-  cursor: default;
-  z-index: 1;
-}
-
-.showNameContact {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  height: 100vh;
-  position: absolute;
-  width: 15%;
-  display: flex;
-  letter-spacing: -10px;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(2rem, 10vw, 100px);
-  background: black;
-  border-right: 1px solid black;
-  cursor: default;
-  z-index: 1;
-}
-.showNameLastWork {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  min-height: 15%;
-  max-height: 20%;
-  position: absolute;
-  width: 85%;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(2rem, 10vw, 100px);
-  letter-spacing: 20px;
-  background: black;
-  z-index: 1;
-  cursor: default;
-}
-.showNameLast {
-  font-family: "Montserrat", sans-serif;
-  color: yellow;
-  min-height: 15%;
-  max-height: 20%;
-  position: absolute;
-  width: min(85%, 100vw);
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(2rem, 10vw, 100px);
-  letter-spacing: 50px;
-  background: black;
-  z-index: 1;
-  cursor: default;
-}
-
 @media screen and (max-width: 800px) {
-  .showNameLast,
-  .showName,
-  .regNav,
-  .showNameAbout,
-  .showNameContact,
-  .showNameLastWork,
-  .showNameWork {
+  
+  .regNav {
     visibility: hidden;
   }
   .smallNav {
@@ -865,41 +582,9 @@ padding-bottom: 10px;
     font-size: clamp(26px, 4vw, 50px);
     margin-top: 70px;
   }
-  /* .infoIcon {
-    position: absolute;
-    top: 30%;
-    cursor: pointer;
-    z-index: 1;
-  } */
+
   .aboutBox {
     margin-top: 10%;
-  }
-
-  /* .langIcon {
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    cursor: pointer;
-    z-index: 1;
-  } */
-  
-  .backCircle {
-    width: 100%;
-    height: 60%;
-    bottom: -35%;
-    /* right: -45%; */
-  }
-  .backCircle2 {
-    width: 100%;
-    height: 60%;
-    bottom: -25%;
-    right: 5%;
-  }
-  .backCircle3 {
-    width: 100%;
-    height: 60%;
-    bottom: -35%;
-    left: -5%;
   }
   .main-desc-text{
     top: 30%;
@@ -907,43 +592,16 @@ padding-bottom: 10px;
     margin-top: 15px;
     font-size: clamp(1.5rem, 5vw, 100px);
   }
-  .contactTitle {
-    
-    
-  }
   .main-name-text {
     top: 17%;
   }
-  .main-firstName-border {
-    top:-27%;
-  }
-  .main-lastName-border {
-    top: -5%;
-  }
-  .main-right-border {
-    font-size: 20px;
-    left: 0%;
-    bottom: 0;
-    transform: rotate(0deg);
-    z-index: 0;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-  }
   .personImg {
-    max-height: clamp(10%, 70vh, 100%);
-    max-width: clamp(10%, 60vw, 100%);
-    bottom: -10%;
+    max-height: clamp(10%, 50vh, 100%);
+    max-width: clamp(10%, 50vw, 100%);
+    bottom: 0;
     min-height: 65%;
     right: 10%;
   }
-
-  /* .personIcon {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    cursor: pointer;
-    z-index: 1;
-  } */
   .facebookLogo {
     position: absolute;
     top: 20%;
@@ -978,9 +636,6 @@ padding-bottom: 10px;
   .aboutText {
     
     height: 30%;
-  }
-  .palmTrees {
-    bottom: -19%;
   }
   .langDiv {
     bottom: -20%;
@@ -1078,28 +733,12 @@ padding-bottom: 10px;
   display: none;
 }
 
-.resume {
-  height: 60px;
-  width: 150px;
-  position: absolute;
-  bottom: 23%;
-  right: 6.3%;
-  border-radius: 5px;
-  background: black;
-  color: yellow;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-}
-
 .footer {
   width: 100%;
-  position: absolute;
+  
   bottom: 0;
   height: 7vh;
-  background: #17252A;
+  background: #ff0000;
   z-index: 10;
   display: flex;
   align-items: center;

@@ -12,7 +12,7 @@ const NavLinks = () => {
         exit={{ opacity: 0 }}
         className="navItems"
       >
-        <Link className="links" to="/about">
+        <a className="links" href="#about" spy={true} smooth={true} >
           <motion.li
             className="indLink"
             whileHover={{
@@ -27,8 +27,8 @@ const NavLinks = () => {
           >
             About
           </motion.li>
-        </Link>
-        <Link className="links" to="/work">
+        </a>
+        <a className="links" href="#work" spy={true} smooth={true} offset={-100} duration={500}>
           <motion.li
             drag
             className="indLink"
@@ -44,9 +44,9 @@ const NavLinks = () => {
           >
             Projects
           </motion.li>
-        </Link>
+        </a>
 
-        <Link className="links" to="/contact">
+        <a className="links" href="#contact" spy={true} smooth={true} offset={-100} duration={500}>
           <motion.li
             className="contactLink"
             whileHover={{
@@ -61,7 +61,7 @@ const NavLinks = () => {
           >
             Contact
           </motion.li>
-        </Link>
+        </a>
       </motion.ul>
     </motion.nav>
   );

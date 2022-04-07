@@ -8,7 +8,7 @@ import gifPro from "../assets/gifPro.png";
 import workoutPro from "../assets/workoutPro.png";
 
 const Work = () => {
-  const [graffi, setGraffi] = useState(false);
+  const [graffi, setGraffi] = useState(true);
   const [chore, setChore] = useState(false);
   const [port, setPort] = useState(false);
   const [work, setWork] = useState(false);
@@ -66,7 +66,7 @@ const Work = () => {
 
   return (
     <motion.div>
-      <div className="workMain">
+      <div className="workMain" id='work'>
         <motion.div
           initial={{ scale: 0, opacity: 0, y: "100vh" }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
