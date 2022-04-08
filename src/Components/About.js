@@ -11,6 +11,7 @@ import { SiTypescript } from "react-icons/si";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineDeveloperMode } from "react-icons/md";
+import wave2 from '../assets/wave2.svg'
 
 
 const About = () => {
@@ -67,8 +68,10 @@ const About = () => {
   };
 
   return (
-    <motion.div>
+    <motion.div style={{position: "relative"}}>
+      <img src={wave2} style={{position:'absolute', top: '0', right: '0', marginTop: '-90px'}} />
       <div className="AboutMain" id='about'>
+        
         <motion.div
           
           initial={{ opacity: 1, scale: 0, y: '100vh' }}

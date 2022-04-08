@@ -4,46 +4,68 @@ import person from "../assets/person.png";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
-
-
-
-
+import wave from '../assets/wave.svg'
 
 const Main = () => {
   return (
- <div id='home'>
-    <motion.div exit={{scale: 0, y: '-100vh', transition: {duration: .5}}} className='showMain'>
-      <motion.h1 initial={{ opacity: 1, scale: 0, y: '100vh' }}
+    <div id="home">
+      <img style={{transform: 'rotate(-10deg)',width: '50%', position: 'absolute', marginTop: '0px', left: '-25%'}} src={wave} />
+      <img style={{transform: 'rotate(10deg)',width: '50%', position: 'absolute', marginTop: '0px', right: '-15%', top: '-5%'}} src={wave} />
+      <motion.div
+        exit={{ scale: 0, y: "-100vh", transition: { duration: 0.5 } }}
+        className="showMain"
+      >
+        <motion.h1
+          initial={{ opacity: 1, scale: 0, y: "100vh" }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: .5, delay: 0 }}
-          exit={{ opacity: 0, y: '-100vh', transition: { duration: 0.5, delay: 0 } }} className='main-name-text'>Will Harris</motion.h1>
- 
-      
-      <motion.h1 initial={{ opacity: 1, scale: 0, y: '100vh' }}
+          transition={{ duration: 0.5, delay: 0 }}
+          exit={{
+            opacity: 0,
+            y: "-100vh",
+            transition: { duration: 0.5, delay: 0 },
+          }}
+          className="main-name-text"
+        >
+          Will Harris
+        </motion.h1>
+
+        <motion.h1
+          initial={{ opacity: 1, scale: 0, y: "100vh" }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: .5, delay: 0 }}
-          exit={{ opacity: 0, y: '-100vh', transition: { duration: 0.5, delay: 0 } }} className='main-desc-text'>Web developer<br/> Based in Tampa, FL.</motion.h1>
-       <motion.img
-        drag
-        initial={{ opacity: 1, scale: 0, y: '100vh' }}
+          transition={{ duration: 0.5, delay: 0 }}
+          exit={{
+            opacity: 0,
+            y: "-100vh",
+            transition: { duration: 0.5, delay: 0 },
+          }}
+          className="main-desc-text"
+        >
+          Web developer
+          <br /> Based in Tampa, FL.
+        </motion.h1>
+        <motion.img
+          drag
+          initial={{ opacity: 1, scale: 0, y: "100vh" }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: .5, delay: 0 }}
-          exit={{ opacity: 0, y: '-100vh', transition: { duration: 0.5, delay: 0 } }}
-        className="personImg"
-        src={person}
-      /> 
-    </motion.div>
-    <div>
-      <About />
-    </div>
-    <div>
-      <Work />
-    </div>
-    <div>
-      <Contact />
-    </div>
-      
-    
+          transition={{ duration: 0.5, delay: 0 }}
+          exit={{
+            opacity: 0,
+            y: "-100vh",
+            transition: { duration: 0.5, delay: 0 },
+          }}
+          className="personImg"
+          src={person}
+        />
+      </motion.div>
+      <div>
+        <About />
+      </div>
+      <div>
+        <Work />
+      </div>
+      <div>
+        <Contact />
+      </div>
     </div>
   );
 };
