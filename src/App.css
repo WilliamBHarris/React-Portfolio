@@ -569,7 +569,7 @@ body {
   
   }
   .workBox {
-    margin-top: -7%;
+    margin-top: 0%;
   }
   .imgDiv {
     height: 200px;
@@ -641,6 +641,9 @@ body {
   .langDiv {
     bottom: -20%;
     position: absolute;
+  }
+  .workBox {
+    height: 70%;
   }
 }
 @media screen and (min-width: 800px) {
