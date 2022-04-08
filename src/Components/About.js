@@ -264,6 +264,30 @@ const About = () => {
                       src="https://picsum.photos/id/203/300"
                     />
                   </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/200/300"
+                    />
+                  </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/201/300"
+                    />
+                  </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/202/300"
+                    />
+                  </div>
+                  <div className="imgDiv">
+                    <img
+                      alt="this is me"
+                      src="https://picsum.photos/id/203/300"
+                    />
+                  </div>
                 </div>
               </motion.div>
             )}

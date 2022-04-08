@@ -12,7 +12,7 @@ const Main = () => {
     <div id="home">
       {/* <img style={{transform: 'rotate(-10deg)',width: '50%', position: 'absolute', marginTop: '0px', left: '-25%'}} src={wave} />
       <img style={{transform: 'rotate(10deg)',width: '50%', position: 'absolute', marginTop: '0px', right: '-15%', top: '-5%'}} src={wave} /> */}
-      <img style={{width: '100%', position: 'absolute', marginTop: '0px', right: '0', bottom: '-0px'}} src={wave3} />
+      <img style={{width: '100%', position: 'absolute', marginTop: '0px', right: '0', bottom: '-0px', zIndex: "2"}} src={wave3} />
       <motion.div
         exit={{ scale: 0, y: "-100vh", transition: { duration: 0.5 } }}
         className="showMain"

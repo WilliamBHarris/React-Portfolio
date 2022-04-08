@@ -177,10 +177,10 @@ body {
 
 .workBox {
   border-radius: 15px;
+  top: 100px;
   margin: auto;
   width: 88%;
   height: 83vh;
-  margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -191,10 +191,10 @@ body {
 }
 
 .projectBox1 button {
- min-height: 50px;
+ min-height: 40px;
  min-width: clamp(70px, 10vw, 122vw); 
- padding: 5px;
- border-radius: 15px;
+ padding: 5px 8px;
+ border-radius: 10px;
  font-size: clamp(.7rem, 1vw, 2vw);
  margin-right: 20px;
  border: none;
@@ -370,8 +370,8 @@ body {
 .aboutImages {
   width: 100%;
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: space-around;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: flex-end;
   height: 100%;
   margin-top: -20px;
@@ -399,8 +399,8 @@ body {
 
 .imgDiv {
 
-  max-height: 300px;
-  max-width: 300px;
+  min-height: 300px;
+  min-width: 300px;
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
@@ -537,7 +537,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 10%;
-  z-index: 4;
+  z-index: 1;
   transform: rotate(90deg);
 }
 
@@ -567,6 +567,9 @@ body {
     overflow-x: scroll;
     column-gap: 5px;
   
+  }
+  .workBox {
+    margin-top: 20%;
   }
   .imgDiv {
     height: 200px;
