@@ -16,7 +16,7 @@ body {
 /* Main Show */
 .mainBox {
   background: rgb(255, 0, 0);
-  height: 93vh;
+  height: 100vh;
   position: relative;
   
 }
@@ -106,9 +106,9 @@ body {
   color:#000000;
   bottom: 60%;
   left: 10%;
-  /* -webkit-text-fill-color: rgb(234, 233, 233);
+  /* -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #17252A; */
+  -webkit-text-stroke-color: black; */
   z-index: 1;
   overflow: visible;
 }
@@ -116,10 +116,10 @@ body {
   font-family: "Montserrat",  Inline One, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: clamp(1.4rem, 3.5vw, 50px);
   position: absolute;
-  color: rgb(234, 233, 233);
-  /* -webkit-text-fill-color: rgb(234, 233, 233);
+  color: white;
+  /* -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #17252A; */
+  -webkit-text-stroke-color: black; */
   bottom: 43%;
   left: clamp(3vw, 207vw, 10%);
 
@@ -152,11 +152,11 @@ body {
 /* Main Nav End */
 
 .AboutMain {
-  height: 93vh;
-  background:rgb(234, 233, 233)
+  height: 100vh;
+  background:rgb(0, 0, 0)
 }
 .showMain {
-  height: 93vh;
+  height: 100vh;
   background:rgb(255, 0, 0);
   overflow: hidden;
 }
@@ -192,13 +192,13 @@ body {
 
 .projectBox1 button {
  min-height: 50px;
- min-width: clamp(80px, 10vw, 122vw); 
+ min-width: clamp(70px, 10vw, 122vw); 
  padding: 5px;
  border-radius: 15px;
  font-size: clamp(.7rem, 1vw, 2vw);
- margin-right: 40px;
+ margin-right: 20px;
  border: none;
- background: rgb(234, 233, 233);
+ background: white;
  color: black;
  font-family: 'Montserrat';
  z-index: 0;
@@ -231,10 +231,10 @@ body {
 }
 
 .workLinks {
-  background: rgb(48, 44, 44, .3);
+  background: red;
   border-radius: 100px;
-  color: rgb(234, 233, 233);
-  width: 40%;
+  color: white;
+  width: 50%;
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
@@ -245,39 +245,23 @@ body {
 }
 
 .workBg{
-  background:rgb(48, 44, 44);
+  background:white;
   text-align: center;
   padding: 10px 30px;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  right: 31%;
-  transform: translate(-50%, -50%);
   z-index: 20;
+  color: black;
 }
 
-.workLinks {
-  font-size: clamp(.6rem, .8vw, 1.5vw);
-  color: rgb(234, 233, 233);
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 5px;
-  margin-top: 5px;
-  position: absolute;
-  top: 60%;
-  right: 10%;
-  transform: translate(-50%, -50%);
-  z-index: 21;
-}
 .workLinks a {
   font-size: clamp(.6rem, .8vw, 1.5vw);
-  color: rgb(234, 233, 233);
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
   padding: 5px;
   margin-top: 5px;
-z-index: 50;
-}
+  z-index: 50;
+} 
 
 .portfolioImage {
   position: absolute;
@@ -300,7 +284,7 @@ z-index: 50;
   text-align: center;
   justify-content: center;
   display: flex;
-  color: #17252A;
+  color: red;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
   font-size: clamp(1.3rem, 10vw, 65px);
@@ -327,7 +311,7 @@ z-index: 50;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #17252A;
+  background: black;
   border-radius: 15px;
   height: 50%;
   width: 75%;
@@ -338,7 +322,7 @@ z-index: 50;
 .aboutText {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(16px, 2vw, 30px);
-  -webkit-text-fill-color: rgb(234, 233, 233);
+  -webkit-text-fill-color: white;
   -webkit-text-stroke-width: .1px;
   -webkit-text-stroke-color: #336c6c;
   height: 60px;
@@ -354,7 +338,7 @@ z-index: 50;
   top: 25%;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(20px, 4vw, 40px);
-  color: #17252A;
+  color: white;
 }
 
 .langDiv {
@@ -377,7 +361,7 @@ z-index: 50;
   align-items: center;
   justify-items: center;
   row-gap: 5px;
-  color: #17252A;
+  color: black;
   top: 40%;
   position: absolute;
 }
@@ -399,7 +383,7 @@ z-index: 50;
 .chooseIcon {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(16px, 4vw, 22px);
-  color: #17252A;
+  color: white;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -430,16 +414,16 @@ z-index: 50;
 }
 
 .connectSpan {
-  color:rgb(234, 233, 233);
+  color:white;
   border-radius: 10px;
   padding: 0px 10px;
-  background-color: #2a1717;
+  background-color: black;
   text-align: center;
-  border: 1px solid #17252A;
+  border: 1px solid black;
 }
 
 .contactTitle {
-  color: #17252A;
+  color: black;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
   font-size: clamp(26px, 4vw, 50px);
@@ -483,7 +467,7 @@ z-index: 50;
 
 .socialLogo {
   font-size: clamp(60px, 6vw, 200px);
-  color:  #17252A;
+  color:  white;
 
 }
 
@@ -515,7 +499,7 @@ z-index: 50;
 }
 
 .workMain {
-  height: 93vh;
+  height: 100vh;
   background:rgb(0, 0, 0);
 }
 
@@ -530,7 +514,7 @@ z-index: 50;
 }
 
 .loadingText {
-  color: #17252A;
+  color: black;
   margin-bottom: 20px;
   font-family: "Montserrat",  "Inline One", sans-serif;
   font-size: 50px;
@@ -540,11 +524,11 @@ z-index: 50;
   display: flex;
 }
 .loadH {
-  color: rgb(234, 233, 233);;
+  color: white;;
 }
 
 .mainTitle {
-  color: rgb(234, 233, 233);;
+  color: white;;
 }
 
 .personImg {
@@ -570,7 +554,7 @@ z-index: 50;
   .chooseIcon {
     font-family: "Montserrat", sans-serif;
     font-size: clamp(16px, 4vw, 22px);
-    color: #17252A;
+    color: white;
   }
   .aboutImages {
     width: 100%;
@@ -678,9 +662,17 @@ z-index: 50;
   padding: 20px;
   border-radius: 0 0 0 15px;
   z-index: 5;
-  background: #17252A;
+  background: black;
   padding-top: 80px;
 }
+
+.mobileLink .indLink {
+  background: black;
+  color: white;
+
+}
+
+
 .mobileLinkBox {
   display: flex;
   flex-direction: column;
@@ -691,7 +683,7 @@ z-index: 50;
 }
 
 .hamMenu {
-  color: black;
+  color: white;
   cursor: pointer;
   position: absolute;
   right: -2%;
@@ -701,7 +693,7 @@ z-index: 50;
 }
 .hamMenuClose {
   
-  color: rgb(234, 233, 233);
+  color: white;
   cursor: pointer;
   position: absolute;
   right: 5%;
@@ -714,20 +706,25 @@ z-index: 50;
 }
 
 .indLink {
-  font-family: ""Montserrat",  Inline One", sans-serif;
-  padding: 20px 40px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: rgb(234, 233, 233);
-}
-.contactLink {
-  font-family: ""Montserrat",  Inline One", sans-serif;
+  font-family: "Montserrat",  "Inline One", sans-serif;
   padding: 7px 20px;
   font-weight: 400;
   border-radius: 5px;
-  background:rgb(234, 233, 233);
-  color: #17252A;
+  background:white;
+  color: black;
   letter-spacing: 2px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.contactLink {
+  font-family: "Montserrat",  "Inline One", sans-serif;
+  padding: 7px 20px;
+  font-weight: 400;
+  border-radius: 5px;
+  background:white;
+  color: black;
+  letter-spacing: 2px;
+  margin-top: 10px;
 }
 
 .mainDesc {
@@ -756,7 +753,7 @@ z-index: 50;
   z-index: 10;
   display: flex;
   align-items: center;
-  color: rgb(234, 233, 233);
+  color: white;
   font-family: 'Montserrat';
   justify-content: flex-end;
   padding-right: 3%;
@@ -766,13 +763,13 @@ z-index: 50;
   font-weight: 500;
   font-size: 15px;
   padding: 10px 15px;
-  background: #336c6c;
+  background: red;
   border-radius: 5px;
 }
 
 .footerLink {
   text-decoration: none;
-  color: rgb(234, 233, 233)
+  color: white;
 }
 
 .copyright {

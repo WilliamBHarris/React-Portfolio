@@ -122,11 +122,11 @@ const Work = () => {
                 transition={{ duration: 0.5 }}
                 exit={{ opacity: 0 }}
                 className="contactTitle"
-                style={{ color: "#17252A" }}
+                style={{ color: "red" }}
               >
                 More to
                 <span
-                  style={{ color: "rgb(234, 233, 233)" }}
+                  style={{ color: "white" }}
                   className="connectSpan"
                 >
                   COME...

@@ -12,16 +12,16 @@ const MobileNavLinks = (props) => {
           transition={{ duration: .5}}
           className='mobileLink'
         >
-          <Link className="links" to="/work">
+          <a className="links" href="#work">
             <motion.li onClick={() => props.isMobile && props.closeMobileMenu()} className='indLink' initial={{opacity: 0, x: 500}} animate={{opacity: 1, x: 0, transition: {duration: .5 ,delay: .05}}}>Projects</motion.li>
-          </Link>
-          <Link className="links" to="/about">
+          </a>
+          <a className="links" href="#about">
             <motion.li onClick={() => props.isMobile && props.closeMobileMenu()} className='indLink' initial={{opacity: 0, x: 500}} animate={{opacity: 1, x: 0, transition: {duration: .5 ,delay: .20}}} >About</motion.li>
-          </Link>
+          </a>
 
-          <Link className="links" to="/contact">
+          <a className="links" href="#contact">
             <motion.li onClick={() => props.isMobile && props.closeMobileMenu()} className='indLink' initial={{opacity: 0, x: 500}} animate={{opacity: 1, x: 0, transition: {duration: .5 ,delay: .40}}}>Contact</motion.li>
-          </Link>
+          </a>
         </motion.ul>
       </motion.nav>
         </div>

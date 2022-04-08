@@ -12,7 +12,7 @@ ReactDOM.render(
     <Router>
       <Nav />
     <App />
-    <Footer />
+    {/* <Footer /> */}
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

@@ -6,6 +6,7 @@ import {AiFillTwitterCircle} from 'react-icons/ai'
 import {AiOutlineMail } from 'react-icons/ai'
 import {AiFillInstagram } from 'react-icons/ai'
 import {AiFillLinkedin } from 'react-icons/ai'
+import Footer from './Footer'
 
 
 const Contact = () => {
@@ -21,11 +22,12 @@ const Contact = () => {
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href='https://www.linkedin.com/in/william-harris-aa67b9236/' className='linkedInLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.3, duration: .5}}}><AiFillLinkedin className="socialLogo"  /></motion.a>
         
         
-          <h1 className='contactTitle' style={{color: '#17252A'}}>Lets <span style={{color: 'rgb(234, 233, 233)'}} className='connectSpan'>CONNECT.</span></h1>
+          <h1 className='contactTitle'>Lets <span style={{color: 'rgb(234, 233, 233)'}} className='connectSpan'>CONNECT.</span></h1>
           
         
       </motion.div>
         </div>
+        <Footer />
         </motion.div>
     )
 }

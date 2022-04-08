@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const NavLinks = () => {
   return (
@@ -16,7 +15,7 @@ const NavLinks = () => {
           <motion.li
             className="indLink"
             whileHover={{
-              scale: 1.3,
+              textDecoration: 'underline',
               transition: {
                 duration: 1,
                 repeat: Infinity,
@@ -33,7 +32,7 @@ const NavLinks = () => {
             drag
             className="indLink"
             whileHover={{
-              scale: 1.3,
+              textDecoration: 'underline',
               transition: {
                 duration: 1,
                 repeat: Infinity,
@@ -50,7 +49,7 @@ const NavLinks = () => {
           <motion.li
             className="contactLink"
             whileHover={{
-              scale: 1.3,
+              textDecoration: 'underline',
               transition: {
                 duration: 1,
                 repeat: Infinity,

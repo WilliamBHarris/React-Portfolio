@@ -11,13 +11,14 @@ import { SiTypescript } from "react-icons/si";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineDeveloperMode } from "react-icons/md";
-import wave2 from '../assets/wave2.svg'
+import wave4 from '../assets/wave4.svg'
+import wave3 from '../assets/wave3.svg'
 
 
 const About = () => {
   const [info, setInfo] = useState(false);
-  const [lang, setLang] = useState(false);
-  const [person, setPerson] = useState(true);
+  const [lang, setLang] = useState(true);
+  const [person, setPerson] = useState(false);
   const [subtitle, setSubtitle] = useState("");
 
   const handleClickLang = () => {
@@ -51,13 +52,13 @@ const About = () => {
 
   const style = {
     active: {
-      color: info ? "rgb(0, 0, 0, .3)" : "#17252A",
+      color: info ? "red" : "white",
     },
     active1: {
-      color: lang ? "rgb(0, 0, 0, .3)" : "#17252A",
+      color: lang ? "red" : "white",
     },
     active2: {
-      color: person ? "rgb(0, 0, 0, .3)" : "#17252A",
+      color: person ? "red" : "white",
     },
     active3: {
       display: person || lang || info ? "none" : "block",
@@ -69,7 +70,7 @@ const About = () => {
 
   return (
     <motion.div style={{position: "relative"}}>
-      <img src={wave2} style={{position:'absolute', top: '0', right: '0', marginTop: '-90px'}} />
+      <img src={wave4} style={{position:'absolute', top: '0', right: '0', marginTop: '-200px', zIndex: '0'}} />
       <div className="AboutMain" id='about'>
         
         <motion.div
@@ -207,10 +208,10 @@ const About = () => {
                   Current
                   <span
                     style={{
-                      background: "#17252A",
-                      color: "rgb(234, 233, 233)",
+                      background: "red",
+                      color: "white",
                       padding: 20,
-                      borderRadius: 10,
+                      borderRadius: "10px",
                     }}
                   >
                     FOCUS.
@@ -269,6 +270,7 @@ const About = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+      <img style={{width: '100%', position: 'absolute', marginTop: '0px', right: '0', bottom: '0'}} src={wave3} />
     </motion.div>
   );
 };
