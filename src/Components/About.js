@@ -82,7 +82,7 @@ const About = () => {
           className="aboutBox"
         >
  
-          <AnimatePresence exitBeforeEnter >{lang === true || info === true  ? null : <div className='titleBox'>
+          <AnimatePresence exitBeforeEnter >{lang === true || info === true || person === true  ? null : <div className='titleBox'>
           <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: .5}} exit={{opacity: 0}} className="aboutTitle">Hello</motion.h1>
           <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: .5}} exit={{opacity: 0}} className="connectSpan aboutTitle">WORLD!</motion.h1>
           </div>}</AnimatePresence>

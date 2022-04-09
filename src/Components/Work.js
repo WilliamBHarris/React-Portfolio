@@ -80,6 +80,12 @@ const Work = () => {
             <button onClick={choreClick}>Chore Me</button>
 
             <button onClick={portClick}>Portfolio</button>
+
+            <button onClick={workClick}>Workout Log</button>
+
+            <button onClick={gifClick}>Gif Finder</button>
+
+            <button onClick={pokeClick}>Poke' Catch</button>
           </div>
           <AnimatePresence exitBeforeEnter>
             {graffi ? (
@@ -315,11 +321,7 @@ const Work = () => {
             ) : null}
           </AnimatePresence>
           <div className="projectBox1">
-            <button onClick={workClick}>Workout Log</button>
-
-            <button onClick={gifClick}>Gif Finder</button>
-
-            <button onClick={pokeClick}>Poke' Catch</button>
+            
           </div>
         </motion.div>
       </div>

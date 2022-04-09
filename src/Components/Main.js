@@ -45,7 +45,7 @@ const Main = () => {
           Web developer
           <br /> Based in Tampa, FL.
         </motion.h1>
-        <motion.img
+        {/* <motion.img
           initial={{ opacity: 1, scale: 0, y: "100vh" }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
@@ -55,7 +55,7 @@ const Main = () => {
             transition: { duration: 0.5, delay: 0 },
           }}
           className="personImg"
-          src={person}
+          src={person} */}
         />
       </motion.div>
       <div>

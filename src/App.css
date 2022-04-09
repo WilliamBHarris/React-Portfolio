@@ -127,7 +127,6 @@ body {
 
 
 .mainNav {
-  /* background: #020000; */
   width: 100%;
   position: absolute;
   right: 0;
@@ -135,9 +134,12 @@ body {
   top: 0;
   margin: auto;
   z-index: 9;
+  /* background: #000000; */
+  height: 8vh;
 }
 
 .navItems {
+  
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -177,7 +179,7 @@ body {
 
 .workBox {
   border-radius: 15px;
-  top: 100px;
+  top: 150px;
   margin: auto;
   width: 88%;
   height: 83vh;
@@ -232,7 +234,7 @@ body {
 
 .workLinks {
   background: red;
-  border-radius: 100px;
+  border-radius: 5px;
   color: white;
   width: 50%;
   text-transform: uppercase;
@@ -247,7 +249,7 @@ body {
 .workBg{
   background:white;
   text-align: center;
-  padding: 10px 30px;
+  padding: 30px 30px;
   border-radius: 10px;
   z-index: 20;
   color: black;
@@ -570,6 +572,7 @@ body {
   }
   .workBox {
     margin-top: 0%;
+    overflow: hidden;
   }
   .imgDiv {
     height: 200px;
@@ -636,7 +639,7 @@ body {
   }
   .aboutText {
     
-    height: 30%;
+    height: 20%;
   }
   .langDiv {
     bottom: -20%;
@@ -716,8 +719,8 @@ body {
   padding: 7px 20px;
   font-weight: 400;
   border-radius: 5px;
-  background:white;
-  color: black;
+  /* background:white; */
+  color: white;
   letter-spacing: 2px;
   margin-right: 10px;
   margin-top: 10px;
@@ -727,7 +730,7 @@ body {
   padding: 7px 20px;
   font-weight: 400;
   border-radius: 5px;
-  background:white;
+  background:red;
   color: black;
   letter-spacing: 2px;
   margin-top: 10px;
@@ -759,7 +762,7 @@ body {
   z-index: 10;
   display: flex;
   align-items: center;
-  color: white;
+  color: red;
   font-family: 'Montserrat';
   justify-content: flex-end;
   padding-right: 3%;
@@ -775,7 +778,7 @@ body {
 
 .footerLink {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .copyright {

@@ -14,7 +14,7 @@ const Contact = () => {
     return (
         <motion.div >
           
-        <div style={{position: 'relative'}}  className='contactMain' id='contact'> <img src={waveCon} style={{position: 'absolute', left: '0',  top: '-110px', transform: 'rotate(-5deg)'}} />     
+        <div style={{position: 'relative'}}  className='contactMain' id='contact'> <img src={waveCon} style={{position: 'absolute', left: '0',  top: '-80px', transform: 'rotate(-5deg)'}} />     
       <motion.div initial={{opacity: 1, y: '100vh', scale: 0}} animate={{opacity: 1, scale: 1, y: 0}} transition={{duration: .5}} exit={{scale:0 ,opacity: 0, y: '-100vh'}} className='aboutBox'>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: .5, duration: .5}}} target="_blank" href="https://github.com/WilliamBHarris" className='githubLogo'><FaGithub className="socialLogo"  /></motion.a>
         <motion.a whileHover={{scale: 1.5, transition: {duration: .3, ease: 'easeInOut'}}} target='_blank' href="https://www.facebook.com/profile.php?id=100079920381742" className='facebookLogo' initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1, duration: .5}}}><BsFacebook className="socialLogo"  /></motion.a>
