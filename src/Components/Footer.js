@@ -1,5 +1,5 @@
 import React from 'react'
-import Resume from '../assets/William_Harris_Update.pdf'
+import Resume from '../assets/DevResume.pdf'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
